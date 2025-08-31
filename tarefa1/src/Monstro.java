@@ -1,11 +1,12 @@
 public abstract class Monstro extends Personagem 
 {
-    public Monstro(String nome, int pontosDeVida, int forca) 
+    public int xpConcedido;
+    
+    public Monstro(String nome, int pontosDeVida, int forca, int xpConcedido) 
     {
         super(nome, pontosDeVida, forca);
+        this.xpConcedido = xpConcedido;
     }
-
-    public int xpConcedido;
 
     @override
     public void exibirStatus() 
