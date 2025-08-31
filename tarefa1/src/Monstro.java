@@ -1,8 +1,10 @@
 public abstract class Monstro extends Personagem {
-    public Monstro(String name) {
-        super(name);
+    public Monstro(String nome, int pontosDeVida, int forca) {
+        super(nome, pontosDeVida, forca)
     }
 
+    public int xpConcedido;
+    
 
     }
 }
