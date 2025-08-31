@@ -1,7 +1,7 @@
 public abstract class Personagem {
-    String nome;
-    int pontosDeVida;
-    int forca;
+    private String nome;
+    private int pontosDeVida;
+    private int forca;
 
     public Personagem(String nome, int pontosDeVida, int forca) {
         this.nome = nome;
