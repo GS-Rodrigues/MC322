@@ -6,7 +6,12 @@ public abstract class Monstro extends Personagem {
     public int xpConcedido;
 
     @override
-    public void exibirStatus();
+    public void exibirStatus() {
+    System.out.println("Nome: " + nome);
+    System.out.println("Vida: " + pontosDeVida);
+    System.out.println("Força: " + forca);
+    System.out.println("XP concedido: " + xpConcedido);
 
+    }
     }
 }
