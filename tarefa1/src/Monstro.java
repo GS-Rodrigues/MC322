@@ -1,6 +1,6 @@
 public abstract class Monstro extends Personagem 
 {
-    public int xpConcedido;
+    private int xpConcedido;
     
     public Monstro(String nome, int pontosDeVida, int forca, int xpConcedido) 
     {
@@ -8,13 +8,15 @@ public abstract class Monstro extends Personagem
         this.xpConcedido = xpConcedido;
     }
 
-    @override
+    @Override
     public void exibirStatus() 
     {
-    System.out.println("Nome: " + nome);
-    System.out.println("Vida: " + pontosDeVida);
-    System.out.println("Força: " + forca);
-    System.out.println("XP concedido: " + xpConcedido);
+        super.exibirStatus(); 
+        System.out.println("XP concedido: " + xpConcedido);
     }
-
+    
+    public int getXpConcedido() 
+        {
+            return xpConcedido;
+        }
 }
