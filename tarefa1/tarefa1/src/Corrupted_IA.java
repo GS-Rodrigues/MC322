@@ -1,4 +1,4 @@
-//import java.util.Random;
+import java.util.Random;
 
 public class Corrupted_IA extends Monstro 
 {
@@ -22,5 +22,6 @@ public class Corrupted_IA extends Monstro
         //String ataque = ataques[ random.nextInt(ataques.length) ]
         //System.out.println(this.getNome() + " " + ataque;
         //alvo.receberDano(this.getForca());
+        //a
     }
 }
