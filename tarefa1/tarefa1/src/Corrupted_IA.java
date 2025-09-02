@@ -1,4 +1,4 @@
-import java.util.Random.;
+//import java.util.Random;
 
 public class Corrupted_IA extends Monstro 
 {
@@ -19,8 +19,8 @@ public class Corrupted_IA extends Monstro
     @Override
     protected void atacar(Personagem alvo) 
     {
-        String ataque = ataques[ random.nextInt(ataques.length) ]
-        System.out.println(this.getNome() + " " + ataque;
-        alvo.receberDano(this.getForca());
+        //String ataque = ataques[ random.nextInt(ataques.length) ]
+        //System.out.println(this.getNome() + " " + ataque;
+        //alvo.receberDano(this.getForca());
     }
 }
