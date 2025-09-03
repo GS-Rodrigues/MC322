@@ -3,11 +3,9 @@ public class Main
 {
         public static final String ORANGE = "\u001B[38;5;208m";
         public static final String BLUE = "\u001B[34m";
-
         public static final String RESET = "\u001B[0m";
 
-
-    public static void main(String[] args) 
+    public static void main() 
     {
         try 
         {
