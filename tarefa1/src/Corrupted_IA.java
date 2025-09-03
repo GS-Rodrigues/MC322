@@ -13,6 +13,9 @@ public class Corrupted_IA extends Monstro
 
     Random gerador = new Random();
             };
+    };
+
+    Random gerador = new Random();
     
     public Corrupted_IA(String nome, int pontosDeVida, int forca) 
     {
