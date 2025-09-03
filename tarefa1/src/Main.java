@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import Monstro;
-import Enxame_Dados;
-import Corrupted_IA;
 
 public class Main 
 {
@@ -9,7 +5,7 @@ public class Main
         public static final String BLUE = "\u001B[34m";
         public static final String RESET = "\u001B[0m";
 
-    public static void main() 
+    public static void main(String[] args) 
     {
         Monstro[] monstros = new Monstro[3];
         monstros[0] = new Enxame_Dados("QLS&#", 150, 15);

@@ -12,10 +12,8 @@ public class Corrupted_IA extends Monstro
     };
 
     Random gerador = new Random();
-            };
-    };
 
-    Random gerador = new Random();
+
     
     public Corrupted_IA(String nome, int pontosDeVida, int forca) 
     {
@@ -26,8 +24,6 @@ public class Corrupted_IA extends Monstro
     protected void atacar(Personagem alvo) 
     {
         String ataque = ataques[gerador.nextInt(ataques.length)];
-        System.out.println(this.getNome() + " " + ataque);
-        String ataque = ataques[random().nextInt(ataques.length)];
         System.out.println(this.getNome() + " " + ataque);
         alvo.receberDano(this.getForca());
     }
