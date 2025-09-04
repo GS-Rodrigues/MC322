@@ -15,8 +15,9 @@ public abstract class Heroi extends Personagem
         this.experiencia += xpconcedido;
         if (experiencia >= 100) {
             //O nível do Herói é incrementado em 1 sempre que a experiencia atinge 100
-            nivel += 1 + experiencia % 100; 
-
+            experiencia %= experiencia;
+            nivel += 1 + experiencia;
+            
         }
         
     }
@@ -26,6 +27,8 @@ public abstract class Heroi extends Personagem
         super.exibirStatus();
         System.out.println("Nivel: " + nivel);
         System.out.println("Experiencia: " + experiencia);
-    
+
     }
+    
+    public abstract void usarHabilidadeEspecial(Personagem alvo);
 }
