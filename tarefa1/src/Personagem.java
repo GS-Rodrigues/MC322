@@ -25,6 +25,7 @@ public abstract class Personagem
     
     public void exibirStatus() 
     {
+        System.out.println(this.getClass());
         System.out.println("Nome: " + nome);
         System.out.println("Vida: " + pontosDeVida);
         System.out.println("Força: " + forca);

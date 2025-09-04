@@ -9,7 +9,7 @@ public class Main
         Monstro[] monstros = new Monstro[3];
         monstros[0] = new Enxame_Dados("QLS", 150, 15);
         monstros[1] = new Corrupted_IA("ChatQPG", 120, 5);
-        monstros[1] = new Corrupted_IA("Geminy", 180, 20);
+        monstros[2] = new Corrupted_IA("Geminy", 180, 20);
 
         try 
         {
@@ -33,25 +33,25 @@ public class Main
                 System.out.print("  ");
                 Thread.sleep(500); // meio segundo
             }
+
+            Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25);
+
             
             System.out.print("\r" + "==================="); 
 
             while (rodando) {
                 System.out.println("\n--- Turno " + turno + " ---");
                 // Atualiza lógica do jogo
-                atualizar(turno, monstros);
-
+                
+                atualizar(turno, heroi, monstros[turno-1]);
                 // apenas 3 turnos
                 if (turno >= 3) 
                 {
                     rodando = false;
                 }
-
                 turno++;
                 Thread.sleep(3000); // 2 segundos delay
-
             }
-
             System.out.println("Fim do jogo!");
         } 
         catch (InterruptedException e) 
@@ -59,13 +59,25 @@ public class Main
             e.printStackTrace();
         }
     }
-
-    static void atualizar(int turno, Monstro[] monstros) 
+    
+    static void atualizar(int turno, Heroi heroi, Monstro monstro) 
     {
         //Atualizar personagens , checar eventos, etc
-                monstros[0].exibirStatus();
+        System.out.println(ORANGE + "Um monstro se esgueira pelo Campus." + RESET);
+        monstro.exibirStatus();
+        System.out.println("\n");
+
+        System.out.println(BLUE + "Um rebelde surge em meio ao caos:" + RESET);
+
+        heroi.exibirStatus();
+
+        heroi.atacar(monstro);
+        if (monstro.isVivo()) 
+        {
+            monstro.atacar(heroi);
+        }
     };
-        
+    
     static void renderizar() 
     {
         // Mostrar informações na tela
