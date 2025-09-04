@@ -7,7 +7,7 @@ public class Marcelo extends Heroi {
     private static final String[] ataques =
     {
     "aplica um algoritmo de otimização u-curve e aplica um golpe crítico computacional",
-    "aplica uma análsei proteômica reversa, quebrando as proteínas sintéticas da carcaça do inimigo",
+    "aplica uma análise proteômica reversa, quebrando as proteínas sintéticas da carcaça do inimigo",
     "identifica padrões nos últimos ataques do inimigo, antecipa o próximo ataque e devolve com dano amplificado!",
     "carrega um dataset sintético massivo nos sensores do robô, colapsando seu processamento!",
     "gera padrões de combate imprevisíveis com uma rede neural combativa, quebrando o sistema de decisão do inimigo!"
