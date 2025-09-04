@@ -34,12 +34,13 @@ public class Marcelo extends Heroi {
     {
         String habilidadeEspecial = 
         """
-        inicia uma sequência de execução paralela em múltiplas GPUs cognitivas,
+        Inicia uma sequência de execução paralela em múltiplas GPUs cognitivas,
         fundindo todas as suas redes neurais, algoritmos genéticos e árvores de decisão em um vírus
         injetado no inimigo!. O resultado: uma Singularidade Algorítmica —
         um colapso computacional que distorce a lógica da IA inimiga ao ponto da autodestruição.
         """;
-        System.out.println(this.getNome() + " " + habilidadeEspecial);
+        
+        System.out.println(this.getNome() + " usa sua especialidade: " + especialidade + "." + habilidadeEspecial);
         alvo.receberDano(this.getForca());
         alvo.receberDano(this.getForca());
 

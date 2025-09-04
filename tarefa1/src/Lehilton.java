@@ -31,12 +31,13 @@ public class Lehilton extends Heroi {
     @Override
     protected void usarHabilidadeEspecial(Personagem alvo)
     {
-        String habilidadeEspecial = """
-                ativa uma busca combinatória massiva sobre todas as possíveis configurações
+        String habilidadeEspecial ="""
+                Ativa uma busca combinatória massiva sobre todas as possíveis configurações
                 do inimigo, identifica todos os pontos de fraqueza e aplica a solução de dano
                 máximo
                 """;
-        System.out.println(this.getNome() + " " + habilidadeEspecial);
+                
+        System.out.println(this.getNome() + " usa sua especialidade: " + especialidade + "." + habilidadeEspecial);
         alvo.receberDano(this.getForca());
         alvo.receberDano(this.getForca());
 
