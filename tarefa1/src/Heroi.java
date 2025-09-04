@@ -1,4 +1,4 @@
-public class Heroi extends Personagem
+public abstract class Heroi extends Personagem
 {
 
     private int nivel;
@@ -9,11 +9,6 @@ public class Heroi extends Personagem
         super(nome, vida, forca);
         this.nivel = 1;
         this.experiencia = 0;
-    }
-
-    public void atacar(Personagem inimigo) 
-    {
-        inimigo.receberDano(this.getForca());
     }
 
     public void ganharExperiencia(int xpconcedido) {
