@@ -13,6 +13,12 @@ public abstract class Heroi extends Personagem
 
     public void ganharExperiencia(int xpconcedido) {
         this.experiencia += xpconcedido;
+        if (experiencia >= 100) {
+            //O nível do Herói é incrementado em 1 sempre que a experiencia atinge 100
+            nivel += 1 + experiencia % 100; 
+
+        }
+        
     }
     
     @Override
