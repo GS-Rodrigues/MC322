@@ -14,8 +14,10 @@ public abstract class Personagem
     public void receberDano(int dano) 
     {
         pontosDeVida = pontosDeVida - dano;
-        //Adicionar uma lógica para indicar que o personagem morreu seu pontos de vida<=0?
-        //Gui: Acho que podemos usar um metodo, tipo essr abaixo
+        if (!isVivo()) {
+            System.out.println(nome+ "foi DERROTADO!");
+        }
+
     }
     
     public boolean isVivo() 
