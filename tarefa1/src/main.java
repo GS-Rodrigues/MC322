@@ -1,20 +1,15 @@
-<<<<<<< HEAD:tarefa1/src/main.java
-=======
-
->>>>>>> 49fa311e91b4126a87b3d6960935d4d81aabfaa6:tarefa1/src/Main.java
 public class Main 
 {
         public static final String ORANGE = "\u001B[38;5;208m";
         public static final String BLUE = "\u001B[34m";
         public static final String RESET = "\u001B[0m";
-<<<<<<< HEAD:tarefa1/src/main.java
-        
-            public static void main(String[] args) 
-=======
 
     public static void main(String[] args) 
->>>>>>> 49fa311e91b4126a87b3d6960935d4d81aabfaa6:tarefa1/src/Main.java
     {
+        Monstro[] monstros = new Monstro[3];
+        monstros[0] = new Enxame_Dados("QLS", 150, 15);
+        monstros[1] = new Corrupted_IA("ChatQPG", 120, 5);
+        monstros[1] = new Corrupted_IA("Geminy", 180, 20);
 
         try 
         {
@@ -44,7 +39,7 @@ public class Main
             while (rodando) {
                 System.out.println("\n--- Turno " + turno + " ---");
                 // Atualiza lógica do jogo
-                atualizar(turno);
+                atualizar(turno, monstros);
 
                 // apenas 3 turnos
                 if (turno >= 3) 
@@ -65,26 +60,15 @@ public class Main
         }
     }
 
-    static void atualizar(int turno) {
-        Enxame_Dados monstro0 = new Enxame_Dados("QLS", 150, 15);
-        Corrupted_IA monstro1 = new Corrupted_IA("ChatQPG", 120, 5);
-        Corrupted_IA monstro2 = new Corrupted_IA("Geminy", 180, 20);
-
+    static void atualizar(int turno, Monstro[] monstros) 
+    {
         //Atualizar personagens , checar eventos, etc
-        System.out.println("Atualizando lógica do jogo...");
-        if (turno == 0) {
-            monstro0.exibirStatus();
-        } else if (turno == 1 ) {
-            
-            monstro1.exibirStatus();
-        } else if (turno == 2 ) {
-            
-            monstro2.exibirStatus();
-        }
+                monstros[0].exibirStatus();
     };
         
-    //static void renderizar() {
-    //    // Mostrar informações na tela
-    //    System.out.println("Renderizando mundo do jogo...");
-    //}
+    static void renderizar() 
+    {
+        // Mostrar informações na tela
+        System.out.println("Renderizando mundo do jogo...");
+    }
 }
