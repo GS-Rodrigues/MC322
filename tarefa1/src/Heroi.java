@@ -4,15 +4,16 @@ public class Heroi extends Personagem
     private int nivel;
     private int experiencia;
 
-    public Heroi(String nome, int vida, int ataque) 
+    public Heroi(String nome, int vida, int forca) 
     {
-        super(nome, vida, ataque);
+        super(nome, vida, forca);
         this.nivel = 1;
         this.experiencia = 0;
     }
 
     public void atacar(Personagem inimigo) 
     {
+        inimigo.receberDano(this.getForca());
     }
 
     public void ganharExperiencia(int xpconcedido) {
@@ -25,6 +26,5 @@ public class Heroi extends Personagem
         System.out.println("Nivel: " + nivel);
         System.out.println("Experiencia: " + experiencia);
     
-        
     }
 }
