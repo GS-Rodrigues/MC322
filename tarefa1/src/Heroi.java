@@ -30,5 +30,5 @@ public abstract class Heroi extends Personagem
 
     }
     
-    public abstract void usarHabilidadeEspecial(Personagem alvo);
+    protected abstract void usarHabilidadeEspecial(Personagem alvo);
 }

@@ -1,19 +1,45 @@
+import java.util.Random;
+
 public class Lehilton extends Heroi {
 
-    private String especialidade;
+    private String especialidade = "Pensamento combinatório";
 
     private static final String[] ataques =
     {
-    "Lehilton aplica Bellman-Ford mentalmente, e encontra o caminho mais eficiente até o ponto fraco do inimigo!",
-    "O professor identifica o parâmetro exato que contra a complexidade do robô, e ataca com precisão milimétrica!",
-    "Lehilton aplicada milhares de cenários de falha no inimigo, até que revele seu bug fatal!",
-    "Lehilton gera uma Máquina de Estados Finitos e processa o inimigo como uma entrada inválida!",
-    "O professor toma a decisão localmente ótima rápidamente. O primeiro componente mais vulnerável do robô é destruído!"
-            };
+    "aplica Bellman-Ford mentalmente, e encontra o caminho mais eficiente até o ponto fraco do inimigo!",
+    "identifica o parâmetro exato que controla a complexidade do robô, e ataca com precisão milimétrica!",
+    "aplicada milhares de cenários de falha no inimigo, até que revele seu bug fatal!",
+    "gera uma Máquina de Estados Finitos e processa o inimigo como uma entrada inválida!",
+    "toma a decisão localmente ótima rápidamente. O primeiro componente mais vulnerável do robô é destruído!"
+    };
     
-    public Lehilton(String nome, int vida, int ataque) 
+    Random gerador = new Random();
+
+    public Lehilton(String nome, int vida, int forca) 
     {
-        super(nome, vida, ataque);
-        especialidade = "Pensamento combinatório";
+        super(nome, vida, forca);
+    }
+
+    @Override
+    protected void atacar(Personagem alvo) 
+    {
+        String ataque = ataques[gerador.nextInt(ataques.length)];
+        System.out.println(this.getNome() + " " + ataque);
+        alvo.receberDano(this.getForca());
+    };
+
+    @Override
+    protected void usarHabilidadeEspecial(Personagem alvo)
+    {
+        String habilidadeEspecial = """
+                ativa uma busca combinatória massiva sobre todas as possíveis configurações
+                do inimigo, identifica todos os pontos de fraqueza e aplica a solução de dano
+                máximo
+                """;
+        System.out.println(this.getNome() + " " + habilidadeEspecial);
+        alvo.receberDano(this.getForca());
+        alvo.receberDano(this.getForca());
+
+
     }
 }
