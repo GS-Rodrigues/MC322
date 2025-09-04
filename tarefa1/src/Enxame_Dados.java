@@ -10,7 +10,7 @@ public class Enxame_Dados extends Monstro
     "lança fragmentos de código em fúria em você sem piedade!",
     "sobrecarrega seus circuitos com loops infinitos!",
     "lança uma tempestade de bits envenenados que drenam sua energia vital!"
-};
+    };
 
     Random gerador = new Random();
     

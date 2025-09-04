@@ -1,20 +1,11 @@
-import java.util.ArrayList;
-import Monstro;
-import Enxame_Dados;
-import Corrupted_IA;
-
 public class Main 
 {
         public static final String ORANGE = "\u001B[38;5;208m";
         public static final String BLUE = "\u001B[34m";
         public static final String RESET = "\u001B[0m";
-
-    public static void main() 
+        
+            public static void main(String[] args) 
     {
-        Monstro[] monstros = new Monstro[3];
-        monstros[0] = new Enxame_Dados("QLS&#", 150, 15);
-        monstros[1] = new Corrupted_IA("ChatQPG$#@", 120, 5);
-        monstros[1] = new Corrupted_IA("$5Geminy8", 180, 20);
 
         try 
         {
@@ -44,7 +35,7 @@ public class Main
             while (rodando) {
                 System.out.println("\n--- Turno " + turno + " ---");
                 // Atualiza lógica do jogo
-                atualizar(turno, monstros);
+                atualizar(turno);
 
                 // apenas 3 turnos
                 if (turno >= 3) 
@@ -65,15 +56,26 @@ public class Main
         }
     }
 
-    static void atualizar(int turno, Monstro[] monstros) {
-        // Atualizar personagens , checar eventos, etc
+    static void atualizar(int turno) {
+        Enxame_Dados monstro0 = new Enxame_Dados("QLS", 150, 15);
+        Corrupted_IA monstro1 = new Corrupted_IA("ChatQPG", 120, 5);
+        Corrupted_IA monstro2 = new Corrupted_IA("Geminy", 180, 20);
+
+        //Atualizar personagens , checar eventos, etc
         System.out.println("Atualizando lógica do jogo...");
-        monstros[0].exibirStatus();
-
-    }
-
-    static void renderizar() {
-        // Mostrar informações na tela
-        System.out.println("Renderizando mundo do jogo...");
-    }
+        if (turno == 0) {
+            monstro0.exibirStatus();
+        } else if (turno == 1 ) {
+            
+            monstro1.exibirStatus();
+        } else if (turno == 2 ) {
+            
+            monstro2.exibirStatus();
+        }
+    };
+        
+    //static void renderizar() {
+    //    // Mostrar informações na tela
+    //    System.out.println("Renderizando mundo do jogo...");
+    //}
 }

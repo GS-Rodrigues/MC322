@@ -2,6 +2,11 @@ import java.util.Random;
 
 public class Corrupted_IA extends Monstro 
 {
+    public Corrupted_IA(String nome, int pontosDeVida, int forca) 
+    {
+        super(nome, pontosDeVida, forca, 100);
+    }
+
     private static final String[] ataques = 
     {
         "lança um ataque de código corrompido!",
@@ -12,11 +17,6 @@ public class Corrupted_IA extends Monstro
     };
 
     Random gerador = new Random();
-    
-    public Corrupted_IA(String nome, int pontosDeVida, int forca) 
-    {
-        super(nome, pontosDeVida, forca, 100);
-    }
     
     @Override
     protected void atacar(Personagem alvo) 
