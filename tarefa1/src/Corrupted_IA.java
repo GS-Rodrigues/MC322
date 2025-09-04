@@ -17,6 +17,8 @@ public class Corrupted_IA extends Monstro
     };
 
     Random gerador = new Random();
+
+
     
     @Override
     protected void atacar(Personagem alvo) 

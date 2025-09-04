@@ -1,10 +1,19 @@
+<<<<<<< HEAD:tarefa1/src/main.java
+=======
+
+>>>>>>> 49fa311e91b4126a87b3d6960935d4d81aabfaa6:tarefa1/src/Main.java
 public class Main 
 {
         public static final String ORANGE = "\u001B[38;5;208m";
         public static final String BLUE = "\u001B[34m";
         public static final String RESET = "\u001B[0m";
+<<<<<<< HEAD:tarefa1/src/main.java
         
             public static void main(String[] args) 
+=======
+
+    public static void main(String[] args) 
+>>>>>>> 49fa311e91b4126a87b3d6960935d4d81aabfaa6:tarefa1/src/Main.java
     {
 
         try 
