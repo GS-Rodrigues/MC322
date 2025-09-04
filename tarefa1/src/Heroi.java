@@ -19,4 +19,12 @@ public class Heroi extends Personagem
         this.experiencia += xpconcedido;
     }
     
+    @Override
+    public void exibirStatus() {
+        super.exibirStatus();
+        System.out.println("Nivel: " + nivel);
+        System.out.println("Experiencia: " + experiencia);
+    
+        
+    }
 }
