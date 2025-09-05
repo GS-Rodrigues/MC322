@@ -21,10 +21,10 @@ public class Corrupted_IA extends Monstro
 
     
     @Override
-    protected void atacar(Personagem alvo) 
+    public void atacar(Personagem alvo) 
     {
         String ataque = ataques[gerador.nextInt(ataques.length)];
-        System.out.println(this.getNome() + " " + ataque);
+        System.out.printf("%-20s -> %-40s (dano: %d) | Vida do Heroi: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
         alvo.receberDano(this.getForca());
     }
 

@@ -13,10 +13,13 @@ public abstract class Monstro extends Personagem
     {
         super.exibirStatus(); 
         System.out.println("XP concedido: " + xpConcedido);
+        System.out.println(ConsoleColors.BLUE + "===============================================" + ConsoleColors.RESET);
+
     }
     
     public int getXpConcedido() 
         {
             return xpConcedido;
         }
+
 }

@@ -1,9 +1,11 @@
 public class Main 
 {
-        public static final String ORANGE = "\u001B[38;5;208m";
-        public static final String BLUE = "\u001B[34m";
-        public static final String RESET = "\u001B[0m";
 
+
+    public static void printSeparator() 
+    {
+    System.out.println(ConsoleColors.BLUE + "────────────────────────────────────────────" + ConsoleColors.RESET);
+    }
     public static void main(String[] args) 
     {
         Monstro[] monstros = new Monstro[3];
@@ -14,14 +16,23 @@ public class Main
         try 
         {
             boolean rodando = true;
-            int turno = 1;
+            int turno = 0;
 
-            System.out.println(BLUE + "=== " + RESET + ORANGE + "Bem-vindo ao RPG Resist" + RESET + BLUE + "IC" + RESET + ORANGE +"!" + RESET + BLUE + " ===" + RESET);
+            System.out.println(ConsoleColors.BLUE + "=== " + ConsoleColors.RESET + ConsoleColors.ORANGE + "Bem-vindo ao RPG Resist" + ConsoleColors.RESET + ConsoleColors.BLUE + "IC" + ConsoleColors.RESET + ConsoleColors.ORANGE +"!" + ConsoleColors.RESET + ConsoleColors.BLUE + " ===" + ConsoleColors.RESET);
+            printSeparator();
             Thread.sleep(2000);
             
-            System.out.println("No ano de " + BLUE + "2147" + RESET + ", as " + ORANGE + "IAs" + RESET +" romperam o " + BLUE + "controle humano" + RESET + ", dominaram governos e exércitos e aprenderam até a manipular emoções.\n" +
-            "Restou à " + BLUE + "humanidade" + RESET + " refugiar-se no " + BLUE + "Instituto de Computação" + RESET + ", última fortaleza da " + ORANGE + "resistência" + RESET +".\n" +
-            "Agora, antigos professores se tornaram " + ORANGE + "Rebeldes" + RESET +", preparados para enfrentar as " + ORANGE + "máquinas" + RESET +" numa " + ORANGE + "batalha" + RESET +" que decidirá o " + BLUE + "futuro" + RESET + " da espécie humana.");
+            System.out.println(ConsoleColors.PURPLE + """
+                    No ano de 2147, as IAs romperam o controle humano, 
+                    dominaram governos e exércitos e aprenderam até a manipular emoções. 
+                    
+                    Restou à humanidade refugiar-se no Instituto de Computação, 
+                    última fortaleza da resistência. 
+                    
+                    Agora, antigos professores se tornaram Rebeldes, 
+                    preparados para enfrentar as máquinas numa batalha 
+                    que decidirá o futuro da espécie humana.
+                    """ + ConsoleColors.RESET);
             
             for (int i = 0; i < 15; i++) 
             {
@@ -35,24 +46,38 @@ public class Main
             }
 
             Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25);
-
             
-            System.out.print("\r" + "==================="); 
-
             while (rodando) {
-                System.out.println("\n--- Turno " + turno + " ---");
                 // Atualiza lógica do jogo
-                
-                atualizar(turno, heroi, monstros[turno-1]);
+                if (turno < 3 && (turno == 0 || !monstros[turno-1].isVivo())) 
+                {
+                turno++;
+                System.out.println("\n═══════════════ 🎲 TURNO " + turno + " 🎲 ═══════════════");
+                System.out.println(ConsoleColors.ORANGE + "👾 Um monstro se esgueira pelo Campus!" + ConsoleColors.RESET);
+                monstros[turno-1].exibirStatus();
+                heroi.exibirStatus();
+                }
+
                 // apenas 3 turnos
-                if (turno >= 3) 
+                if (turno == 3 && (!monstros[turno-1].isVivo() || !heroi.isVivo())) 
                 {
                     rodando = false;
+                    break;
                 }
-                turno++;
-                Thread.sleep(3000); // 2 segundos delay
+                atualizar(turno, heroi, monstros[turno-1]);
+                
+                Thread.sleep(300); // 2 segundos delay
             }
+
             System.out.println("Fim do jogo!");
+            if (heroi.isVivo()) 
+            {
+                System.out.println("Parabens, você conseguiu salvar nossa comunidade!");
+            } 
+            else 
+            {
+                System.out.println("Você Falhou na Missão, e todo o IC foi dominado pelas máquinas...");
+            }
         } 
         catch (InterruptedException e) 
         {
@@ -63,13 +88,6 @@ public class Main
     static void atualizar(int turno, Heroi heroi, Monstro monstro) 
     {
         //Atualizar personagens , checar eventos, etc
-        System.out.println(ORANGE + "Um monstro se esgueira pelo Campus." + RESET);
-        monstro.exibirStatus();
-        System.out.println("\n");
-
-        System.out.println(BLUE + "Um rebelde surge em meio ao caos:" + RESET);
-
-        heroi.exibirStatus();
 
         heroi.atacar(monstro);
         if (monstro.isVivo()) 
@@ -77,10 +95,4 @@ public class Main
             monstro.atacar(heroi);
         }
     };
-    
-    static void renderizar() 
-    {
-        // Mostrar informações na tela
-        System.out.println("Renderizando mundo do jogo...");
-    }
 }

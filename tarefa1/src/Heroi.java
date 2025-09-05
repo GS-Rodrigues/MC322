@@ -1,6 +1,5 @@
 public abstract class Heroi extends Personagem
-{
-
+{    
     private int nivel;
     private int experiencia;
 
@@ -25,10 +24,15 @@ public abstract class Heroi extends Personagem
     @Override
     public void exibirStatus() {
         super.exibirStatus();
-        System.out.println("Nivel: " + nivel);
-        System.out.println("Experiencia: " + experiencia);
+
+        System.out.println( 
+            "⭐ Nível: " + ConsoleColors.PURPLE + nivel + ConsoleColors.RESET);
+        System.out.println(
+            "📊 Experiência: " + ConsoleColors.CYAN + experiencia + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLUE + "===============================================" + ConsoleColors.RESET);
 
     }
+
     
     protected abstract void usarHabilidadeEspecial(Personagem alvo);
 }

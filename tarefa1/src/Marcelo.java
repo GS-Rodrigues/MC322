@@ -22,11 +22,11 @@ public class Marcelo extends Heroi {
     }
 
     @Override
-    protected void atacar(Personagem alvo) 
+    public void atacar(Personagem alvo) 
     {
         String ataque = ataques[gerador.nextInt(ataques.length)];
-        System.out.println(this.getNome() + " " + ataque);
         alvo.receberDano(this.getForca());
+        System.out.printf("%-20s -> %-40s (dano: %d) | Vida do inimigo: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
     };
 
     @Override
