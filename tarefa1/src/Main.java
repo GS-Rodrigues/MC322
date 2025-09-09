@@ -47,7 +47,8 @@ public class Main
 
             Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25);
             
-            while (rodando) {
+            while (rodando) 
+            {
                 // Atualiza lógica do jogo
                 if (turno < 3 && (turno == 0 || !monstros[turno-1].isVivo())) 
                 {
