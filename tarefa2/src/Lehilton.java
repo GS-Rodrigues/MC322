@@ -15,9 +15,9 @@ public class Lehilton extends Heroi {
     
     Random gerador = new Random();
 
-    public Lehilton(String nome, int vida, int forca) 
+    public Lehilton(String nome, int vida, int forca, Arma arma) 
     {
-        super(nome, vida, forca);
+        super(nome, vida, forca, arma);
     }
 
     @Override

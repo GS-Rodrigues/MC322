@@ -16,9 +16,9 @@ public class Marcelo extends Heroi {
     
     Random gerador = new Random();
 
-    public Marcelo(String nome, int vida, int forca) 
+    public Marcelo(String nome, int vida, int forca, Arma arma) 
     {
-        super(nome, vida, forca);
+        super(nome, vida, forca, arma);
     }
 
     @Override
