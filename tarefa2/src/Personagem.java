@@ -39,6 +39,10 @@ public abstract class Personagem
     public int getVida() { return pontosDeVida; }
     public int getForca() { return forca; }
     public Arma getArma() { return arma; }
+    
+    public void setArma(Arma novaArma) {
+        this.arma = novaArma;
+    }
 
     public abstract void atacar(Personagem alvo);
     

@@ -16,6 +16,10 @@ public abstract class Heroi extends Personagem
         this.pontos_para_proximo_nivel = 100;
     }
 
+    public double getSorte(){
+        return sorte;
+    }
+
     public void ganharExperiencia(int xpconcedido) {
         this.experiencia += xpconcedido;
         if (experiencia >= pontos_para_proximo_nivel) {
@@ -24,6 +28,16 @@ public abstract class Heroi extends Personagem
             this.subirDeNivel();
         }
 
+    }
+
+    public void equiparArma(Arma novaArma) {
+        if (this.nivel < novaArma.getminNivel()) {
+            System.out.println("O Herói não possui nível suficiente para equipar essa arma!")
+        }
+        else{
+            this.setArma(novaArma);
+            System.out.printf("A arma %s foi equipada!", novaArma.getClass());
+        }
     }
     
     private void subirDeNivel() {
@@ -35,7 +49,7 @@ public abstract class Heroi extends Personagem
     
     //Método para definir a sorte do herói
     Random gerador = new Random();
-    private void definir_sorte() {
+    protected void definir_sorte(){
         this.sorte = gerador.nextDouble();
     }
     

@@ -35,19 +35,15 @@ public class Lehilton extends Heroi {
     @Override
     public void usarHabilidadeEspecial(Personagem alvo)
     {
-        sorte = 
-        System.out.println("Lehilton se concentra, preparando um ataque brutal. Desfere o golpe e: ");
-        if(sorte>75%):
-        String habilidadeEspecial ="""
-                Ativa uma busca combinatória massiva sobre todas as possíveis configurações
-                do inimigo, identifica todos os pontos de fraqueza e aplica a solução de dano
-                máximo
-                """;
-                
-        System.out.println(this.getNome() + " usa sua especialidade: " + especialidade + "." + habilidadeEspecial);
-        alvo.receberDano(this.getForca()+ this.getArma().getdano());
-        alvo.receberDano(this.getForca()+ this.getArma().getdano());
-
-
+        this.definir_sorte();
+        System.out.printf("Lehilton se concentra, usa sua %s preparando um ataque brutal. Desfere o golpe e: ",especialidade);
+        if (this.getSorte() >= 0.75) {
+            System.out.println("ACERTA! (DANO CRÍTICO): Ativa uma busca combinatória massiva sobre todas as possíveis configurações " + 
+                               "do inimigo, identifica todos os pontos de fraqueza e aplica a solução de dano " +
+                               "máximo");
+            alvo.receberDano(2*(this.getForca()+ this.getArma().getdano()));
+        }
+        else {
+            System.out.println("ERRA! Não causa dano no inimigo!");}
     }
 }
