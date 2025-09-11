@@ -14,9 +14,9 @@ public class Enxame_Dados extends Monstro
 
     Random gerador = new Random();
     
-    public Enxame_Dados(String nome, int pontosDeVida, int forca) 
+    public Enxame_Dados(String nome, int pontosDeVida, int forca, Arma arma) 
     {
-        super(nome, pontosDeVida, forca, 100);
+        super(nome, pontosDeVida, forca, 100, arma);
     }
     
     @Override

@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Corrupted_IA extends Monstro 
 {
-    public Corrupted_IA(String nome, int pontosDeVida, int forca) 
+    public Corrupted_IA(String nome, int pontosDeVida, int forca, Arma arma) 
     {
-        super(nome, pontosDeVida, forca, 100);
+        super(nome, pontosDeVida, forca, 100, arma);
     }
 
     private static final String[] ataques = 
