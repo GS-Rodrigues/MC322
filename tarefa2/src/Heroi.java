@@ -3,9 +3,9 @@ public abstract class Heroi extends Personagem
     private int nivel;
     private int experiencia;
 
-    public Heroi(String nome, int vida, int forca) 
+    public Heroi(String nome, int vida, int forca, Arma arma) 
     {
-        super(nome, vida, forca);
+        super(nome, vida, forca, arma);
         this.nivel = 1;
         this.experiencia = 0;
     }
