@@ -26,6 +26,9 @@ public class Lehilton extends Heroi {
         String ataque = ataques[gerador.nextInt(ataques.length)];
         alvo.receberDano(this.getForca() + this.getArma().getdano());
         System.out.printf("%-20s -> %-40s (dano: %d) | Vida do inimigo: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
+        if (!alvo.isVivo()) {
+            System.out.printf("%s FOI DERROTADO\n", alvo.getNome());
+        }
 
     };
 

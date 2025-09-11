@@ -54,14 +54,15 @@ public class Main
                 heroi.exibirStatus();
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)
                 {
-                    Monstro monstro_atual = fase_atual.getMonstros()[i];
-                    System.out.println(
-                            "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
-                    while(heroi.isVivo()  && monstro_atual.isVivo()){
-                        heroi.atacar(monstro_atual);
-                        if (monstro_atual.isVivo())
-                        {
-                            monstro_atual.atacar(heroi);
+                    if (heroi.isVivo()) {
+                        Monstro monstro_atual = fase_atual.getMonstros()[j];
+                        System.out.println(
+                                "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
+                        while (heroi.isVivo() && monstro_atual.isVivo()) {
+                            heroi.atacar(monstro_atual);
+                            if (monstro_atual.isVivo()) {
+                                monstro_atual.atacar(heroi);
+                            }
                         }
                     }
                 }

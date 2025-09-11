@@ -1,9 +1,9 @@
 public abstract class Personagem 
 {
-    private String nome;
-    private int pontosDeVida;
-    private int forca;
-    private Arma arma;
+    protected String nome;
+    protected int pontosDeVida;
+    protected int forca;
+    protected Arma arma;
 
     public Personagem(String nome, int pontosDeVida, int forca, Arma arma) 
     {
@@ -16,10 +16,6 @@ public abstract class Personagem
     public void receberDano(int dano) 
     {
         pontosDeVida = pontosDeVida - dano;
-        if (!isVivo()) {
-            System.out.println(nome+ "foi DERROTADO!");
-        }
-
     }
     
     public boolean isVivo() 

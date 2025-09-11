@@ -24,8 +24,13 @@ public class Corrupted_IA extends Monstro
     public void atacar(Personagem alvo) 
     {
         String ataque = ataques[gerador.nextInt(ataques.length)];
-        System.out.printf("%-20s -> %-40s (dano: %d) | Vida do Heroi: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
         alvo.receberDano(this.getForca());
+        System.out.printf("%-20s -> %-40s (dano: %d) | Vida do Heroi: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
+        if (!alvo.isVivo()) {
+            System.out.printf("%s FOI DERROTADO\n", alvo.getNome());
+        }
     }
 
 }
+
+   
