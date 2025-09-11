@@ -27,10 +27,13 @@ public class ConstrutorDeCenario {
     
     public static ArrayList<Fase> gerarFases(int nFases)
     {
+    Arma codeblade = new Codeblade(10, 0);
+    Arma hammer = new Turing_Hammer(20, 1);
+        
         ArrayList<Fase> fases = new ArrayList<>();
         for (int i = 0; i < nFases; i++) {
-            Monstro monstro1 = new Corrupted_IA(nomeMonstros1[i], 100 + 20*(i+1), 5 +5*(i+1));
-            Monstro monstro2 = new Enxame_Dados(nomeMonstros2[i], 100 + 20*(i+1), 5 +5*(i+1));
+            Monstro monstro1 = new Corrupted_IA(nomeMonstros1[i], 100 + 20*(i+1), 5 +5*(i+1), codeblade );
+            Monstro monstro2 = new Enxame_Dados(nomeMonstros2[i], 100 + 20*(i+1), 5 +5*(i+1),hammer);
             Monstro[] monstrosDaFase = new Monstro[] {monstro1, monstro2};
             fases.add(new Fase(i, nomeFases[i], monstrosDaFase));
         }

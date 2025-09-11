@@ -24,7 +24,7 @@ public class Lehilton extends Heroi {
     public void atacar(Personagem alvo) 
     {
         String ataque = ataques[gerador.nextInt(ataques.length)];
-        alvo.receberDano(this.getForca());
+        alvo.receberDano(this.getForca() + this.getArma().getdano());
         System.out.printf("%-20s -> %-40s (dano: %d) | Vida do inimigo: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
 
     };
@@ -39,8 +39,8 @@ public class Lehilton extends Heroi {
                 """;
                 
         System.out.println(this.getNome() + " usa sua especialidade: " + especialidade + "." + habilidadeEspecial);
-        alvo.receberDano(this.getForca());
-        alvo.receberDano(this.getForca());
+        alvo.receberDano(this.getForca()+ this.getArma().getdano());
+        alvo.receberDano(this.getForca()+ this.getArma().getdano());
 
 
     }

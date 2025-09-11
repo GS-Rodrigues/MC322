@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main 
 {
 
@@ -8,10 +10,7 @@ public class Main
     }
     public static void main(String[] args) 
     {
-        Monstro[] monstros = new Monstro[3];
-        monstros[0] = new Enxame_Dados("QLS", 150, 15);
-        monstros[1] = new Corrupted_IA("ChatQPG", 120, 5);
-        monstros[2] = new Corrupted_IA("Geminy", 180, 20);
+    ArrayList<Fase> fases =  ConstrutorDeCenario.gerarFases(3);
 
         try 
         {
@@ -45,30 +44,30 @@ public class Main
                 Thread.sleep(500); // meio segundo
             }
 
-            Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25);
+            Arma codeblade = new Codeblade(10, 0);
+            Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25,codeblade);
             
-            while (rodando) 
-            {
-                // Atualiza lógica do jogo
-                if (turno < 3 && (turno == 0 || !monstros[turno-1].isVivo())) 
-                {
-                turno++;
-                System.out.println("\n═══════════════ 🎲 TURNO " + turno + " 🎲 ═══════════════");
-                System.out.println(ConsoleColors.ORANGE + "👾 Um monstro se esgueira pelo Campus!" + ConsoleColors.RESET);
-                monstros[turno-1].exibirStatus();
+            for (int i = 0; i < 3; i++) {
+                Fase fase_atual = fases.get(i);
+                System.out.println(fase_atual.getAmbiente());
+                Thread.sleep(1500); // 1,5 segundo
                 heroi.exibirStatus();
+                for(int j = 0; j < fase_atual.getMonstros().length; j++)
+                {
+                    Monstro monstro_atual = fase_atual.getMonstros()[i];
+                    System.out.println(
+                            "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
+                    while(heroi.isVivo()  && monstro_atual.isVivo()){
+                        heroi.atacar(monstro_atual);
+                        if (monstro_atual.isVivo())
+                        {
+                            monstro_atual.atacar(heroi);
+                        }
+                    }
                 }
 
-                // apenas 3 turnos
-                if (turno == 3 && (!monstros[turno-1].isVivo() || !heroi.isVivo())) 
-                {
-                    rodando = false;
-                    break;
-                }
-                atualizar(turno, heroi, monstros[turno-1]);
-                
-                Thread.sleep(300); // 2 segundos delay
             }
+
 
             System.out.println("Fim do jogo!");
             if (heroi.isVivo()) 

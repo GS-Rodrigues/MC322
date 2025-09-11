@@ -9,11 +9,11 @@ public abstract class Monstro extends Personagem
     {
         new Codeblade(10, 0),
         new Turing_Hammer(20, 1),
-        new Data_rifle(20,2)
+        new Data_rifle(30,2)
     };
     public Monstro(String nome, int pontosDeVida, int forca, int xpConcedido, Arma arma) 
     {
-        super(nome, pontosDeVida, forca, arma);
+        super(nome, pontosDeVida, forca,arma);
         this.xpConcedido = xpConcedido;
     }
 
@@ -31,7 +31,7 @@ public abstract class Monstro extends Personagem
         return xpConcedido;
     };
         
-    public Arma largaArma() 
+    public static Arma largaArma() 
     {
         Random rand = new Random();
         int numeroAleatorio = rand.nextInt(listaDeArmasParaLargar.length);
