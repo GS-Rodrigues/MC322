@@ -35,6 +35,9 @@ public class Lehilton extends Heroi {
     @Override
     public void usarHabilidadeEspecial(Personagem alvo)
     {
+        sorte = 
+        System.out.println("Lehilton se concentra, preparando um ataque brutal. Desfere o golpe e: ");
+        if(sorte>75%):
         String habilidadeEspecial ="""
                 Ativa uma busca combinatória massiva sobre todas as possíveis configurações
                 do inimigo, identifica todos os pontos de fraqueza e aplica a solução de dano

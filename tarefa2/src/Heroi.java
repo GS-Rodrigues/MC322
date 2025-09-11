@@ -1,8 +1,12 @@
+import java.util.Random;
+
+
 public abstract class Heroi extends Personagem
-{    
+{
     private int nivel;
     private int experiencia;
     private int pontos_para_proximo_nivel;
+    private double sorte;
 
     public Heroi(String nome, int vida, int forca, Arma arma) 
     {
@@ -23,10 +27,16 @@ public abstract class Heroi extends Personagem
     }
     
     private void subirDeNivel() {
-        this.nivel+=1;
+        this.nivel += 1;
         this.pontosDeVida += 10;
         this.forca += 10;
         this.pontos_para_proximo_nivel += 100;
+    }
+    
+    //Método para definir a sorte do herói
+    Random gerador = new Random();
+    private void definir_sorte() {
+        this.sorte = gerador.nextDouble();
     }
     
     @Override
