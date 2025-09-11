@@ -63,7 +63,7 @@ public class Main
                             }
                             else {
                                 heroi.definir_sorte();
-                                if(heroi.getSorte()>=0.01){heroi.equiparArma(Monstro.largaArma());}
+                                if(heroi.getSorte()>=0.75){heroi.equiparArma(Monstro.largaArma());}
                             }
                         }
                     }
