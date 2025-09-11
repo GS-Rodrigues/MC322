@@ -3,6 +3,7 @@ import java.util.Random;
 
 public abstract class Heroi extends Personagem
 {
+
     private int nivel;
     private int experiencia;
     private int pontos_para_proximo_nivel;
@@ -32,11 +33,11 @@ public abstract class Heroi extends Personagem
 
     public void equiparArma(Arma novaArma) {
         if (this.nivel < novaArma.getminNivel()) {
-            System.out.println("O Herói não possui nível suficiente para equipar essa arma!")
+            System.out.println("O Herói não possui nível suficiente para equipar essa arma!");
         }
         else{
             this.setArma(novaArma);
-            System.out.printf("A arma %s foi equipada!", novaArma.getClass());
+            System.out.printf("A arma %s foi equipada!", novaArma.getClass().getSimpleName());
         }
     }
     

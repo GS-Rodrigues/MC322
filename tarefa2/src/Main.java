@@ -50,7 +50,7 @@ public class Main
             for (int i = 0; i < 3; i++) {
                 Fase fase_atual = fases.get(i);
                 System.out.println(fase_atual.getAmbiente());
-                Thread.sleep(1500); // 1,5 segundo
+                Thread.sleep(4000); // 1,5 segundo
                 heroi.exibirStatus();
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)
                 {
@@ -62,6 +62,10 @@ public class Main
                             heroi.atacar(monstro_atual);
                             if (monstro_atual.isVivo()) {
                                 monstro_atual.atacar(heroi);
+                            }
+                            else {
+                                heroi.definir_sorte();
+                                if(heroi.getSorte()>=0.01){heroi.equiparArma(Monstro.largaArma());}
                             }
                         }
                     }
