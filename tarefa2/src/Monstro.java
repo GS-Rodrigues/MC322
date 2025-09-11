@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public abstract class Monstro extends Personagem 
 {
     private int xpConcedido;
@@ -25,8 +27,15 @@ public abstract class Monstro extends Personagem
     }
     
     public int getXpConcedido() 
-        {
-            return xpConcedido;
-        }
+    {
+        return xpConcedido;
+    };
+        
+    public Arma largaArma() 
+    {
+        Random rand = new Random();
+        int numeroAleatorio = rand.nextInt(listaDeArmasParaLargar.length);
+        return listaDeArmasParaLargar[numeroAleatorio];
+    };
 
 }
