@@ -9,4 +9,18 @@ public class Fase {
         this.ambiente = ambiente;
         this.monstros = monstros;
     }
+
+    public int getNivel() 
+    {
+        return nivel;
+    }
+    public String getAmbiente()
+    {
+        return ambiente;
+    }
+
+    public Monstro[] getMonstros() {
+        return monstros;
+    }
+    
 }
