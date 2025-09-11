@@ -3,12 +3,14 @@ public abstract class Personagem
     private String nome;
     private int pontosDeVida;
     private int forca;
+    private Arma arma;
 
-    public Personagem(String nome, int pontosDeVida, int forca) 
+    public Personagem(String nome, int pontosDeVida, int forca, Arma arma) 
     {
         this.nome = nome;
         this.pontosDeVida = pontosDeVida;
         this.forca = forca;
+        this.arma = arma;
     }
 
     public void receberDano(int dano) 
@@ -40,6 +42,7 @@ public abstract class Personagem
     public String getNome() { return nome; }
     public int getVida() { return pontosDeVida; }
     public int getForca() { return forca; }
+    public Arma getArma() { return arma; }
 
     public abstract void atacar(Personagem alvo);
     
