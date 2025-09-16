@@ -18,6 +18,11 @@ public abstract class Personagem implements Combatente
         pontosDeVida = pontosDeVida - dano;
     }
     
+        public void receberCura(int cura) 
+    {
+        pontosDeVida = pontosDeVida + cura;
+    }
+    
     public boolean estaVivo() 
     {
         return pontosDeVida > 0;
