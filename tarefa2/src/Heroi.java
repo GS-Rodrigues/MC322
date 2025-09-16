@@ -50,7 +50,7 @@ public abstract class Heroi extends Personagem
     
     //Método para definir a sorte do herói
     Random gerador = new Random();
-    protected void definir_sorte(){
+    public void definir_sorte(){
         this.sorte = gerador.nextDouble();
     }
     
