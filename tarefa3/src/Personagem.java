@@ -1,4 +1,4 @@
-public abstract class Personagem 
+public abstract class Personagem implements Combatente
 {
     protected String nome;
     protected int pontosDeVida;
@@ -18,7 +18,7 @@ public abstract class Personagem
         pontosDeVida = pontosDeVida - dano;
     }
     
-    public boolean isVivo() 
+    public boolean estaVivo() 
     {
         return pontosDeVida > 0;
     }
