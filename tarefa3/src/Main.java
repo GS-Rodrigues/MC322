@@ -59,7 +59,7 @@ public class Main
                         while (heroi.estaVivo() && monstro_atual.estaVivo()) {
                             heroi.escolherAcao(monstro_atual);
                             if (monstro_atual.estaVivo()) {
-                                monstro_atual.atacar(heroi);
+                                monstro_atual.escolherAcao(heroi);
                             }
                             else {
                                 heroi.definir_sorte();
@@ -96,7 +96,7 @@ public class Main
         heroi.escolherAcao(monstro);
         if (monstro.estaVivo()) 
         {
-            monstro.atacar(heroi);
+            monstro.escolherAcao(heroi);
         }
     };
 }
