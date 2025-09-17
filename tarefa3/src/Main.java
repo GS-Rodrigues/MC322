@@ -52,13 +52,13 @@ public class Main
                 heroi.exibirStatus();
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)
                 {
-                    if (heroi.isVivo()) {
+                    if (heroi.estaVivo()) {
                         Monstro monstro_atual = fase_atual.getMonstros()[j];
                         System.out.println(
                                 "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
-                        while (heroi.isVivo() && monstro_atual.isVivo()) {
-                            heroi.atacar(monstro_atual);
-                            if (monstro_atual.isVivo()) {
+                        while (heroi.estaVivo() && monstro_atual.estaVivo()) {
+                            heroi.escolherAcao(monstro_atual);
+                            if (monstro_atual.estaVivo()) {
                                 monstro_atual.atacar(heroi);
                             }
                             else {
@@ -74,7 +74,7 @@ public class Main
 
 
             System.out.println("Fim do jogo!");
-            if (heroi.isVivo()) 
+            if (heroi.estaVivo()) 
             {
                 System.out.println("Parabens, você conseguiu salvar nossa comunidade!");
             } 
@@ -93,8 +93,8 @@ public class Main
     {
         //Atualizar personagens , checar eventos, etc
 
-        heroi.atacar(monstro);
-        if (monstro.isVivo()) 
+        heroi.escolherAcao(monstro);
+        if (monstro.estaVivo()) 
         {
             monstro.atacar(heroi);
         }
