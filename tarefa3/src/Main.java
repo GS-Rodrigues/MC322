@@ -57,9 +57,10 @@ public class Main
                         System.out.println(
                                 "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
                         while (heroi.estaVivo() && monstro_atual.estaVivo()) {
-                            heroi.escolherAcao(monstro_atual);
+                            heroi.escolherAcao(monstro_atual).executar(heroi, monstro_atual);;
+
                             if (monstro_atual.estaVivo()) {
-                                monstro_atual.escolherAcao(heroi);
+                                monstro_atual.escolherAcao(heroi).executar(monstro_atual, heroi);;
                             }
                             else {
                                 heroi.definir_sorte();
