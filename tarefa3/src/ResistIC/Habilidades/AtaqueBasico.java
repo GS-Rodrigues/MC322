@@ -1,4 +1,8 @@
+package ResistIC.Habilidades;
 import java.util.Random;
+
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
 
 public class AtaqueBasico implements AcaoDeCombate {
     private String[] frases;

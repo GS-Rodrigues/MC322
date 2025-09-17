@@ -1,4 +1,9 @@
+package ResistIC.Personagens.Herois;
 import java.util.Random;
+
+import ResistIC.Personagens.Personagem;
+import ResistIC.Suporte.ConsoleColors;
+import ResistIC.itens.Armas.Arma;
 
 public abstract class Heroi extends Personagem {
 

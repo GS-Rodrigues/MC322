@@ -1,4 +1,14 @@
+package ResistIC;
 import java.util.ArrayList;
+
+import ResistIC.Logica.ConstrutorDeCenario;
+import ResistIC.Logica.Fase;
+import ResistIC.Personagens.Herois.Heroi;
+import ResistIC.Personagens.Herois.Lehilton;
+import ResistIC.Personagens.Monstros.Monstro;
+import ResistIC.Suporte.ConsoleColors;
+import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Codeblade;
 
 public class Main 
 {

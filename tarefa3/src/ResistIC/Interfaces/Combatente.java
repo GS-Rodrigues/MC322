@@ -1,3 +1,6 @@
+package ResistIC.Interfaces;
+import ResistIC.itens.Armas.Arma;
+
 public interface Combatente 
 {
     String getNome();

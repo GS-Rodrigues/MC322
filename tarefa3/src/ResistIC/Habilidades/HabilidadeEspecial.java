@@ -1,3 +1,9 @@
+package ResistIC.Habilidades;
+
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.Personagens.Herois.Heroi;
+
 public class HabilidadeEspecial implements AcaoDeCombate {
     private String especialidade;
 

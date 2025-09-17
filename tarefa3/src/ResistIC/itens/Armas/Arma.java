@@ -1,3 +1,4 @@
+package ResistIC.itens.Armas;
 public abstract class Arma {
     private int dano;
     private int minNivel;

@@ -1,4 +1,12 @@
+package ResistIC.Logica;
 import java.util.ArrayList;
+
+import ResistIC.Personagens.Monstros.Corrupted_IA;
+import ResistIC.Personagens.Monstros.Enxame_Dados;
+import ResistIC.Personagens.Monstros.Monstro;
+import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Codeblade;
+import ResistIC.itens.Armas.Turing_Hammer;
 
 
 public class ConstrutorDeCenario {

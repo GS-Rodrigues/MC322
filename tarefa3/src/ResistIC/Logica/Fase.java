@@ -1,3 +1,6 @@
+package ResistIC.Logica;
+import ResistIC.Personagens.Monstros.Monstro;
+
 public class Fase {
     private int nivel;
     private String ambiente;

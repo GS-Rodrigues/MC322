@@ -1,4 +1,10 @@
+package ResistIC.Personagens.Monstros;
 import java.util.Random;
+
+import ResistIC.Habilidades.AtaqueBasico;
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.itens.Armas.Arma;
 
 public class Enxame_Dados extends Monstro 
 {

@@ -1,3 +1,8 @@
+package ResistIC.Personagens;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.Suporte.ConsoleColors;
+import ResistIC.itens.Armas.Arma;
+
 public abstract class Personagem implements Combatente
 {
     protected String nome;

@@ -1,4 +1,10 @@
+package ResistIC.Personagens.Monstros;
 import java.util.Random;
+
+import ResistIC.Habilidades.AtaqueBasico;
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.itens.Armas.Arma;
 
 public class Corrupted_IA extends Monstro {
     public Corrupted_IA(String nome, int pontosDeVida, int forca, Arma arma) {

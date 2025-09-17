@@ -1,3 +1,10 @@
+package ResistIC.Personagens.Herois;
+import ResistIC.Habilidades.AtaqueBasico;
+import ResistIC.Habilidades.HabilidadeEspecial;
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.itens.Armas.Arma;
+
 public class Marcelo extends Heroi {
 
     public Marcelo(String nome, int vida, int forca, Arma arma) {

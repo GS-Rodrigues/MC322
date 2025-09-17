@@ -1,7 +1,10 @@
-public class Data_rifle extends Arma 
+package ResistIC.itens.Armas;
+import ResistIC.Suporte.ConsoleColors;
+
+public class Turing_Hammer extends Arma 
 {
 
-    public Data_rifle(int dano, int minNivel) 
+    public Turing_Hammer(int dano, int minNivel) 
     {
         super(dano, minNivel);
 
