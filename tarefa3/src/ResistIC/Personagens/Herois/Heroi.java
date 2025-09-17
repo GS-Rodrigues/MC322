@@ -1,6 +1,9 @@
 package ResistIC.Personagens.Herois;
+
+import java.util.List;
 import java.util.Random;
 
+import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Personagens.Personagem;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Arma;
@@ -17,7 +20,19 @@ public abstract class Heroi extends Personagem {
         this.nivel = 1;
         this.experiencia = 0;
         this.pontos_para_proximo_nivel = 100;
+
     }
+
+    private List<AcaoDeCombate> acoes;
+
+    public List<AcaoDeCombate> getAcoes() {
+        return acoes;
+    }
+
+    public void addAcao(AcaoDeCombate acao) {
+        this.acoes.add(acao);
+    }
+
 
     public double getSorte() {
         return sorte;
@@ -68,5 +83,5 @@ public abstract class Heroi extends Personagem {
                 .println(ConsoleColors.BLUE + "===============================================" + ConsoleColors.RESET);
 
     }
-    
+
 }

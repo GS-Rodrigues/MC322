@@ -1,4 +1,5 @@
 package ResistIC.Personagens;
+import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Arma;
@@ -53,5 +54,7 @@ public abstract class Personagem implements Combatente
     public void setArma(Arma novaArma) {
         this.arma = novaArma;
     }
+
+    public abstract AcaoDeCombate escolherAcao(Combatente alvo);
     
 }
