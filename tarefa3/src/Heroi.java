@@ -63,4 +63,5 @@ public abstract class Heroi extends Personagem {
                 .println(ConsoleColors.BLUE + "===============================================" + ConsoleColors.RESET);
 
     }
+    
 }
