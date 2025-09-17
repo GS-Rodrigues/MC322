@@ -1,4 +1,5 @@
 package ResistIC;
+
 import java.util.ArrayList;
 
 import ResistIC.Logica.ConstrutorDeCenario;
