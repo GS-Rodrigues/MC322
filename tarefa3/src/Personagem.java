@@ -22,7 +22,7 @@ public abstract class Personagem implements Combatente
     {
         pontosDeVida = pontosDeVida + cura;
     }
-    
+
     public boolean estaVivo() 
     {
         return pontosDeVida > 0;
@@ -48,7 +48,5 @@ public abstract class Personagem implements Combatente
     public void setArma(Arma novaArma) {
         this.arma = novaArma;
     }
-
-    public abstract void atacar(Personagem alvo);
     
 }

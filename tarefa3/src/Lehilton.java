@@ -2,6 +2,11 @@ import java.util.Random;
 
 public class Lehilton extends Heroi {
 
+    public Lehilton(String nome, int vida, int forca, Arma arma) 
+    {
+        super(nome, vida, forca, arma);
+    }
+
     private String especialidade = "Pensamento combinatório";
 
     private static final String[] ataques =
@@ -12,25 +17,19 @@ public class Lehilton extends Heroi {
     "gera uma Máquina de Estados Finitos e processa o inimigo como uma entrada inválida!",
     "toma a decisão localmente ótima rápidamente. O primeiro componente mais vulnerável do robô é destruído!"
     };
-    
-    Random gerador = new Random();
 
-    public Lehilton(String nome, int vida, int forca, Arma arma) 
-    {
-        super(nome, vida, forca, arma);
+    @Override
+    public String[] getDescricoesDeAtaque() {
+        return ataques;
     }
 
     @Override
-    public void atacar(Personagem alvo) 
-    {
-        String ataque = ataques[gerador.nextInt(ataques.length)];
-        alvo.receberDano(this.getForca() + this.getArma().getdano());
-        System.out.printf("%-20s -> %-40s (dano: %d) | Vida do inimigo: %d\n", this.getNome(), ataque, this.getForca(), alvo.getVida());
-        if (!alvo.isVivo()) {
-            System.out.printf("%s FOI DERROTADO\n", alvo.getNome());
-        }
-
-    };
+    public AcaoDeCombate escolherAcao(Combatente alvo) {
+        return new AtaqueBasico(ataques);
+        // verificar a parte da tarefa que eles comentam de IA
+    }
+    
+    Random gerador = new Random();
 
     @Override
     public void usarHabilidadeEspecial(Personagem alvo)

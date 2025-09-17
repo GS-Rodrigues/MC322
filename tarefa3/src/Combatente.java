@@ -5,4 +5,9 @@ public interface Combatente
     void receberDano(int dano);
     void receberCura(int cura);
     AcaoDeCombate escolherAcao(Combatente alvo);
+    public int getVida();
+    public int getForca();
+    public Arma getArma();
+    String[] getDescricoesDeAtaque();
+
 }
