@@ -35,7 +35,6 @@ public class Lehilton extends Heroi {
     @Override
     public AcaoDeCombate escolherAcao(Combatente alvo) {
         if (alvo.getVida() > 30) {
-
             return new HabilidadeEspecial(especialidade);
         } else {
             return new AtaqueBasico(ataques);
