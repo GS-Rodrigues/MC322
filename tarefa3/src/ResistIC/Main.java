@@ -59,7 +59,8 @@ public class Main
             Arma codeblade = new Codeblade(10, 0);
             Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25,codeblade);
             
-            for (int i = 0; i < 3; i++) {
+            //Laço de repetição principal
+            for (int i = 0; i < fases.size(); i++) {
                 FaseDeCombate fase_atual = fases.get(i);
                 fase_atual.iniciar(heroi);
                 Thread.sleep(4000); // 1,5 segundo
