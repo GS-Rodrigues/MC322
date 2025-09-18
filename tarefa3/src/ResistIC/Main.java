@@ -62,14 +62,20 @@ public class Main
             //Laço de repetição principal
             for (int i = 0; i < fases.size(); i++) {
                 FaseDeCombate fase_atual = fases.get(i);
+
+                //Iniciando a fase 
                 fase_atual.iniciar(heroi);
                 Thread.sleep(4000); // 1,5 segundo
+
+                //Laço de combate para cada monstro da fase
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)
                 {
                     if (heroi.estaVivo()) {
                         Monstro monstro_atual = fase_atual.getMonstros()[j];
                         System.out.println(
                                 "O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
+
+                        //Laço while para verificar se os combatentes estão vivos
                         while (heroi.estaVivo() && monstro_atual.estaVivo()) {
                             heroi.escolherAcao(monstro_atual).executar(heroi, monstro_atual);;
 
