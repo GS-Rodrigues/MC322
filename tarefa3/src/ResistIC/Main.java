@@ -2,7 +2,7 @@ package ResistIC;
 
 import java.util.ArrayList;
 
-import ResistIC.Interfaces.GeradorDeFases;
+import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Logica.ConstrutorDeCenarioFixo;
 import ResistIC.Logica.FaseDeCombate;
 import ResistIC.Personagens.Herois.Heroi;
@@ -63,9 +63,8 @@ public class Main
             for (int i = 0; i < fases.size(); i++) {
                 FaseDeCombate fase_atual = fases.get(i);
 
-                //Iniciando a fase 
+                //Iniciando a fase. OBS: o método getTipoCenario é chamado dentro de "iniciar(heroi)"
                 fase_atual.iniciar(heroi);
-                Thread.sleep(4000); // 1,5 segundo
 
                 //Laço de combate para cada monstro da fase
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)

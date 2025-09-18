@@ -11,7 +11,7 @@ import ResistIC.itens.Armas.Arma;
 public class Lehilton extends Heroi {
     private String especialidade = "Pensamento combinatório";
 
-    public Lehilton(String nome, int vida, int forca, Arma arma, List<AcaoDeCombate> acoes) {
+    public Lehilton(String nome, int vida, int forca, Arma arma){
         super(nome, vida, forca, arma);
         AcaoDeCombate ataqueBasico = new AtaqueBasico(ataques);
         AcaoDeCombate habilidade = new HabilidadeEspecial(especialidade);
