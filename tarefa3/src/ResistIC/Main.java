@@ -2,8 +2,9 @@ package ResistIC;
 
 import java.util.ArrayList;
 
-import ResistIC.Logica.ConstrutorDeCenario;
-import ResistIC.Logica.Fase;
+import ResistIC.Interfaces.GeradorDeFases;
+import ResistIC.Logica.ConstrutorDeCenarioFixo;
+import ResistIC.Logica.FaseDeCombate;
 import ResistIC.Personagens.Herois.Heroi;
 import ResistIC.Personagens.Herois.Lehilton;
 import ResistIC.Personagens.Monstros.Monstro;
@@ -21,10 +22,12 @@ public class Main
     }
     public static void main(String[] args) 
     {
-    ArrayList<Fase> fases =  ConstrutorDeCenario.gerarFases(3);
 
         try 
         {
+
+        ConstrutorDeCenarioFixo gerador_de_fases = new ConstrutorDeCenarioFixo();
+        ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(3);
 
             System.out.println(ConsoleColors.BLUE + "=== " + ConsoleColors.RESET + ConsoleColors.ORANGE + "Bem-vindo ao RPG Resist" + ConsoleColors.RESET + ConsoleColors.BLUE + "IC" + ConsoleColors.RESET + ConsoleColors.ORANGE +"!" + ConsoleColors.RESET + ConsoleColors.BLUE + " ===" + ConsoleColors.RESET);
             printSeparator();
@@ -57,10 +60,9 @@ public class Main
             Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25,codeblade);
             
             for (int i = 0; i < 3; i++) {
-                Fase fase_atual = fases.get(i);
-                System.out.println(fase_atual.getAmbiente());
+                FaseDeCombate fase_atual = fases.get(i);
+                fase_atual.iniciar(heroi);
                 Thread.sleep(4000); // 1,5 segundo
-                heroi.exibirStatus();
                 for(int j = 0; j < fase_atual.getMonstros().length; j++)
                 {
                     if (heroi.estaVivo()) {
