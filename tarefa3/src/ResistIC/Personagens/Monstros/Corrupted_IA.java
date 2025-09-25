@@ -4,7 +4,9 @@ import java.util.Random;
 import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
+import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Turing_Hammer;
 
 public class Corrupted_IA extends Monstro {
     public Corrupted_IA(String nome, int pontosDeVida, int forca, Arma arma) {
@@ -24,6 +26,11 @@ public class Corrupted_IA extends Monstro {
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;
+    }
+
+    public Item droparLoot() {
+        Item item = new Turing_Hammer(this.forca, forca / 20);
+        return item;
     }
 
     @Override

@@ -4,7 +4,9 @@ import java.util.Random;
 import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
+import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Codeblade;
 
 public class Enxame_Dados extends Monstro 
 {
@@ -28,6 +30,11 @@ public class Enxame_Dados extends Monstro
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;
+    }
+
+    public Item droparLoot() {
+    Item item = new Codeblade(this.forca, forca / 20);
+        return item;
     }
 
     @Override

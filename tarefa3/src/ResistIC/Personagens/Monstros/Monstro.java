@@ -1,6 +1,8 @@
 package ResistIC.Personagens.Monstros;
+
 import java.util.Random;
 
+import ResistIC.Interfaces.Lootavel;
 import ResistIC.Personagens.Personagem;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Arma;
@@ -8,7 +10,7 @@ import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Data_rifle;
 import ResistIC.itens.Armas.Turing_Hammer;
 
-public abstract class Monstro extends Personagem 
+public abstract class Monstro extends Personagem implements Lootavel
 {
     private int xpConcedido;
 
