@@ -2,7 +2,6 @@
 
 import java.util.ArrayList;
 
-import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Logica.ConstrutorDeCenarioFixo;
 import ResistIC.Logica.FaseDeCombate;
 import ResistIC.Personagens.Herois.Heroi;
