@@ -1,5 +1,6 @@
 package ResistIC.Personagens.Herois;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -14,16 +15,18 @@ public abstract class Heroi extends Personagem {
     private int experiencia;
     private int pontos_para_proximo_nivel;
     private double sorte;
+    private List<AcaoDeCombate> acoes;
 
     public Heroi(String nome, int vida, int forca, Arma arma) {
         super(nome, vida, forca, arma);
         this.nivel = 1;
         this.experiencia = 0;
         this.pontos_para_proximo_nivel = 100;
+        this.acoes = new ArrayList<>();
 
     }
 
-    private List<AcaoDeCombate> acoes;
+    
 
     public List<AcaoDeCombate> getAcoes() {
         return acoes;

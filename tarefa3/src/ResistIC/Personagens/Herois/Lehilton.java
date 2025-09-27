@@ -1,6 +1,5 @@
 package ResistIC.Personagens.Herois;
 
-import java.util.List;
 
 import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Habilidades.HabilidadeEspecial;
