@@ -33,7 +33,7 @@ public class Main
             Thread.sleep(2000);
             
             System.out.println(ConsoleColors.PURPLE + """
-                    No ano de 2147, as IAs romperam o controle humano, super bug 
+                    No ano de 2147, as IAs romperam o controle humano,
                     dominaram governos e exércitos e aprenderam até a manipular emoções. 
                     
                     Restou à humanidade refugiar-se no Instituto de Computação, 
@@ -82,7 +82,6 @@ public class Main
                                 monstro_atual.escolherAcao(heroi).executar(monstro_atual, heroi);;
                             }
                             else {
-                                System.out.println("NÃO SEI ONDE ESTÁ O BUG");
                                 heroi.definir_sorte();
                                 if (heroi.getSorte() >= 0.01) {
                                     heroi.equiparArma((Arma)monstro_atual.droparLoot());
