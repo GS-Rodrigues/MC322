@@ -70,7 +70,7 @@ public abstract class Heroi extends Personagem {
     Random gerador = new Random();
 
     public void definir_sorte() {
-        this.sorte = gerador.nextDouble();
+        this.sorte = gerador.nextDouble() + variacao_sorte_heroi;
     }
 
     @Override
