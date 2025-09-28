@@ -14,7 +14,24 @@ public class GameManager {
         try {
 
             ConstrutorDeCenarioFixo gerador_de_fases = new ConstrutorDeCenarioFixo();
-            ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(3);
+            int quantidade_de_fases = InputManager.lerInteiro("Quantas fases quer jogar? (1,2 ou 3)", 1, 3);
+            int dificuldade = InputManager
+                    .lerInteiro("Selecione a dificuldade: Pressione 1: FÁCIL\n 2: NORMAL\n 3: DIFÍCIL", 1, 3);
+            
+            Dificuldade dificuldade_de_jogo;
+            switch (dificuldade) {
+                case 1:
+                    dificuldade_de_jogo = Dificuldade.FACIL;
+                    break;
+                case 2:
+                    dificuldade_de_jogo = Dificuldade.NORMAL;
+                    break;
+                case 3:
+                    dificuldade_de_jogo = Dificuldade.DIFICL;
+                    break;
+            }
+            
+            ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(quantidade_de_fases, dificuldade_de_jogo);
 
             for (int i = 0; i < 15; i++) {
                 System.out.print("\r" + "Carregando jogo");
