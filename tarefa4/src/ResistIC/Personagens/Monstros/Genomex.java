@@ -31,7 +31,7 @@ public class Genomex extends Monstro {
     + " O combate contra Genomex é uma corrida entre sua evolução e sua destruição.";
 
     public Item droparLoot() {
-        Item item = new Codeblade(this.forca, forca / 20);
+        Item item = new Codeblade();
         return item;
     }
 

@@ -5,14 +5,14 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Habilidades.HabilidadeEspecial;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
-import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Codeblade;
 import ResistIC.Suporte.ConsoleColors;
 
 public class Lehilton extends Heroi {
     private String especialidade = "Pensamento combinatório";
 
-    public Lehilton(String nome, int vida, int forca, Arma arma, double variacao_sorte_heroi){
-        super(nome, vida, forca, arma, variacao_sorte_heroi);
+    public Lehilton(String nome, double variacao_sorte_heroi){
+        super(nome, new Codeblade(), variacao_sorte_heroi);
         AcaoDeCombate ataqueBasico = new AtaqueBasico(ataques);
         AcaoDeCombate habilidade = new HabilidadeEspecial(especialidade);
         this.addAcao(habilidade);

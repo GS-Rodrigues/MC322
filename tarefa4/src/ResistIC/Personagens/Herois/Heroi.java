@@ -18,7 +18,7 @@ public abstract class Heroi extends Personagem {
     private double variacao_sorte_heroi;
     private List<AcaoDeCombate> acoes;
 
-    public Heroi(String nome, int vida, int forca, Arma arma, double variacao_sorte_heroi) {
+    public Heroi(String nome, Arma arma, double variacao_sorte_heroi) {
         super(nome,  200,  100, arma);
         this.nivel = 1;
         this.experiencia = 0;

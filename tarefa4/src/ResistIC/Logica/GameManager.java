@@ -2,8 +2,7 @@ package ResistIC.Logica;
 
 import java.util.ArrayList;
 
-import ResistIC.Personagens.Herois.Heroi;
-import ResistIC.Personagens.Herois.Lehilton;
+import ResistIC.Personagens.Herois.*;
 import ResistIC.Personagens.Monstros.Monstro;
 import ResistIC.itens.Armas.Arma;
 import ResistIC.itens.Armas.Codeblade;
@@ -17,6 +16,9 @@ public class GameManager {
             int quantidade_de_fases = InputManager.lerInteiro("Quantas fases quer jogar? (1,2 ou 3)", 1, 3);
             int dificuldade = InputManager
                     .lerInteiro("Selecione a dificuldade: Pressione 1: FÁCIL\n 2: NORMAL\n 3: DIFÍCIL", 1, 3);
+            String string_heroi = InputManager.lerString("Qual heroi você deseja escolher? (Lehilton/Marcelo)");
+
+
             
             Dificuldade dificuldade_de_jogo;
             switch (dificuldade) {
@@ -30,6 +32,20 @@ public class GameManager {
                     dificuldade_de_jogo = Dificuldade.DIFICL;
                     break;
             }
+
+            String nome_do_jogador = InputManager.lerString("Digite o nome do seu personagem: ");
+            Heroi heroi;
+            switch (string_heroi) {
+                case "Lehilton" :
+                case "lehilton":
+                    heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
+                    break;
+                case "Marcelo":
+                case "marcelo":
+                    heroi = new Marcelo(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
+                    break;
+            }
+
             
             ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(quantidade_de_fases, dificuldade_de_jogo);
 
@@ -42,8 +58,6 @@ public class GameManager {
                 Thread.sleep(500); // meio segundo
             }
 
-            Arma codeblade = new Codeblade(10, 0);
-            Lehilton heroi = new Lehilton("Rebelde Anônimo", 200, 25, codeblade);
 
             // Laço de repetição principal
             for (int i = 0; i < fases.size(); i++) {

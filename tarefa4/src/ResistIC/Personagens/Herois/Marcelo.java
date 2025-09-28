@@ -4,12 +4,16 @@ import ResistIC.Habilidades.HabilidadeEspecial;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Suporte.ConsoleColors;
-import ResistIC.itens.Armas.Arma;
+import ResistIC.itens.Armas.Turing_Hammer;
 
 public class Marcelo extends Heroi {
 
-    public Marcelo(String nome, int vida, int forca, Arma arma, double variacao_sorte_heroi) {
-        super(nome, vida, forca, arma, variacao_sorte_heroi);
+    public Marcelo(String nome, double variacao_sorte_heroi) {
+        super(nome, new Turing_Hammer(), variacao_sorte_heroi);
+        AcaoDeCombate ataqueBasico = new AtaqueBasico(ataques);
+        AcaoDeCombate habilidade = new HabilidadeEspecial(especialidade);
+        this.addAcao(habilidade);
+        this.addAcao(ataqueBasico);
     }
 
     private String especialidade = "Identificação de padrões";
