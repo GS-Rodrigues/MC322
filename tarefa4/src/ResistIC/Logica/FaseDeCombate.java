@@ -2,7 +2,6 @@ package ResistIC.Logica;
 import ResistIC.Interfaces.Fase;
 import ResistIC.Personagens.Monstros.Monstro;
 import ResistIC.Personagens.Herois.Heroi;
-import ResistIC.Logica.Dificuldade;
 
 
 public class FaseDeCombate implements Fase {
@@ -26,8 +25,8 @@ public class FaseDeCombate implements Fase {
 
     public void iniciar(Heroi heroi)
     {
-        this.Tipo_de_Cenario.apresentarInformacoesCenario();
         System.out.println(this.getAmbiente());
+        this.Tipo_de_Cenario.apresentarInformacoesCenario();
         try {
             Thread.sleep(4000);
             heroi.exibirStatus();

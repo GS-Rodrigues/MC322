@@ -6,6 +6,7 @@ import ResistIC.Personagens.Monstros.Chronoloop;
 import ResistIC.Personagens.Monstros.Canvaspecter;
 import ResistIC.Personagens.Monstros.Monstro;
 import ResistIC.Personagens.Monstros.Genomex;
+import ResistIC.Suporte.ConsoleColors;
 
 
 public class ConstrutorDeCenarioFixo implements GeradorDeFases {
@@ -13,9 +14,9 @@ public class ConstrutorDeCenarioFixo implements GeradorDeFases {
     //Nome e descrição das fases
     private static final String[] nomeFases =
     {
-        "Instituto de Biologia: Uma grande vegetação cobre o imponente prédio, onde pesquisas com perigosos seres biológicos fugiram do controle... O que pode se espreitar por essas bandas? ",
-        "Instituto de Artes: bonitas harmonias ecoam pelos corredores, capazes de hipnotizar o mais firme dos combatentes",
-        "Instituto de Física Gleb Wataghin - o temido: Uma grande nuvem escura paira sobre o prédio, similar a um hospício. Manchas de sangue tingem o chão de vermelho. Que loucuras se passam ali?"
+        ConsoleColors.GREEN +"Instituto de Biologia: Uma grande vegetação cobre o imponente prédio, onde pesquisas com perigosos seres biológicos fugiram do controle... O que pode se espreitar por essas bandas? " + ConsoleColors.RESET,
+        ConsoleColors.PURPLE + "Instituto de Artes: bonitas harmonias ecoam pelos corredores, capazes de hipnotizar o mais firme dos combatentes" + ConsoleColors.RESET,
+        ConsoleColors.YELLOW + "Instituto de Física Gleb Wataghin - o temido: Uma grande nuvem escura paira sobre o prédio, similar a um hospício. Manchas de sangue tingem o chão de vermelho. Que loucuras se passam ali?" + ConsoleColors.RESET
     };
     
     

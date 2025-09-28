@@ -11,10 +11,13 @@ public class GameManager {
         try {
 
             ConstrutorDeCenarioFixo gerador_de_fases = new ConstrutorDeCenarioFixo();
-            int quantidade_de_fases = InputManager.lerInteiro("Quantas fases quer jogar? (1,2 ou 3)", 1, 3);
+            int quantidade_de_fases = InputManager.lerInteiro("Quantas fases quer jogar? (1,2 ou 3) -->", 1, 3);
+            System.out.println();
             int dificuldade = InputManager
-                    .lerInteiro("Selecione a dificuldade: Pressione 1: FÁCIL\n 2: NORMAL\n 3: DIFÍCIL", 1, 3);
-            String string_heroi = InputManager.lerString("Qual heroi você deseja escolher? (Lehilton/Marcelo)");
+                    .lerInteiro("Selecione a dificuldade. Digite \n1: FÁCIL\n2: NORMAL\n3: DIFÍCIL\nE dê ENTER -->", 1,
+                            3);
+            System.out.println();
+            String string_heroi = InputManager.lerString("Qual heroi você deseja escolher? (Lehilton/Marcelo)-->");
 
             Dificuldade dificuldade_de_jogo = Dificuldade.NORMAL;
 /*             switch (dificuldade) {
@@ -52,6 +55,10 @@ public class GameManager {
                 System.out.print("  ");
                 Thread.sleep(500); // meio segundo
             }
+            System.out.println();
+            System.out.println();
+
+
 
             // Laço de repetição principal
             for (int i = 0; i < fases.size(); i++) {

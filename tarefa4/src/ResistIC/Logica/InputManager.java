@@ -16,9 +16,11 @@ public class InputManager {
                 if (valor >= min && valor <= max) {
                     return valor;
                 } else {
+                    System.out.println();
                     System.out.println("⚠️ Valor fora do intervalo [" + min + ", " + max + "]. Tente novamente.");
                 }
             } catch (NumberFormatException e) {
+                System.out.println();
                 System.out.println("⚠️ Entrada inválida. Digite um número inteiro.");
             }
         }
@@ -43,6 +45,7 @@ public class InputManager {
             } else if (valor == 'n') {
                 return false;
             } else {
+                System.out.println();
                 System.out.println("⚠️ Entrada inválida. Digite s ou n");
             }
         }
