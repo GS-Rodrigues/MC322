@@ -8,7 +8,7 @@ import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Codeblade;
 
-public class Enxame_Dados extends Monstro {
+public class Monstro_IB extends Monstro {
     private static final String[] ataques = {
             "invade o sistema, corrompendo suas defesas!",
             "lança milhares de pacotes binários como insetos digitais contra você!",
@@ -20,8 +20,8 @@ public class Enxame_Dados extends Monstro {
 
     Random gerador = new Random();
 
-    public Enxame_Dados() {
-        super("Enxame de Dados", 200, 40, 200, new Codeblade(10, 1));
+    public Monstro_IB() {
+        super("Monstro_IB", 100, 20, 100, new Codeblade(10, 1));
     }
 
     public Item droparLoot() {

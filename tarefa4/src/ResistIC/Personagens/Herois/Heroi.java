@@ -15,14 +15,16 @@ public abstract class Heroi extends Personagem {
     private int experiencia;
     private int pontos_para_proximo_nivel;
     private double sorte;
+    private double variacao_sorte_heroi;
     private List<AcaoDeCombate> acoes;
 
-    public Heroi(String nome, int vida, int forca, Arma arma) {
+    public Heroi(String nome, int vida, int forca, Arma arma, double variacao_sorte_heroi) {
         super(nome, vida, forca, arma);
         this.nivel = 1;
         this.experiencia = 0;
         this.pontos_para_proximo_nivel = 100;
         this.acoes = new ArrayList<>();
+        this.variacao_sorte_heroi = variacao_sorte_heroi;
 
     }
 

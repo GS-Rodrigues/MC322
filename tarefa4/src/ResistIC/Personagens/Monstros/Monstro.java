@@ -9,6 +9,7 @@ import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Data_rifle;
 import ResistIC.itens.Armas.Turing_Hammer;
 
+
 public abstract class Monstro extends Personagem implements Lootavel
 {
     private int xpConcedido;
@@ -22,7 +23,7 @@ public abstract class Monstro extends Personagem implements Lootavel
 
     public Monstro(String nome, int pontosDeVida, int forca, int xpConcedido, Arma arma) 
     {
-        super(nome, pontosDeVida, forca,arma);
+        super(nome, pontosDeVida, forca, arma);
         this.xpConcedido = xpConcedido;
     }
 
@@ -46,5 +47,9 @@ public abstract class Monstro extends Personagem implements Lootavel
         int numeroAleatorio = rand.nextInt(listaDeArmasParaLargar.length);
         return listaDeArmasParaLargar[numeroAleatorio];
     };
+
+    public void setPontosDeVida(double fatorDeVariacao){
+        this.pontosDeVida = pontosDeVida*fatorDeVariacao;
+    }
 
 }
