@@ -7,44 +7,43 @@ import ResistIC.Suporte.Lore;
 
 public class MenuPrincipal {
     public void escolher() {
-        int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 6);
-        if (instancia == 1)
-        {
-            GameManager newgame = new GameManager();
-            newgame.iniciar();
-        }
-        
-        else if (instancia == 2)
-        {
-            System.out.println(Lehilton.descricao);
-            System.out.println(Marcelo.descricao);
-        }
-        
-        else if (instancia == 3)
-        {
-            System.out.println(ConsoleColors.ORANGE + "Desculpe, ainda estamos desenvolvendo essa funcionalidade!");
-        }
-        
-        else if (instancia == 4) 
-        {
-            System.out.println(ConsoleColors.ORANGE + "Desculpe, ainda estamos desenvolvendo essa funcionalidade!");
-        }
-        
-        else if (instancia == 5) 
-        {
-            Lore.imprimir();
-        }
+        boolean rodando = true;
+        while (rodando) {
+            int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 6);
+            if (instancia == 1) {
+                GameManager newgame = new GameManager();
+                newgame.iniciar();
+            }
 
-        else if (instancia == 6)
-        {
-            System.out.println(ConsoleColors.ORANGE + "GUILHERME RODRIGUES DA SILVA: "
-                    + ConsoleColors.RESET
-                    + "Aluno de Ciência da Computação na Universidade Estadual de Campinas (ingresso em 2024). Github: https://github.com/GS-Rodrigues)");
-              
-            System.out.println(ConsoleColors.ORANGE + "GIOVANNI BARBOSA HERRERO: "
-                    + ConsoleColors.RESET
-                    + "Aluno de Ciência da Computação na Universidade Estadual de Campinas (ingresso em 2024). Github: https://github.com/GiovanniHerrero)");
-             
+            else if (instancia == 2) {
+                System.out.println(Lehilton.descricao);
+                System.out.println(Marcelo.descricao);
+            }
+
+            else if (instancia == 3) {
+                System.out.println(ConsoleColors.ORANGE + "Desculpe, ainda estamos desenvolvendo essa funcionalidade!");
+            }
+
+            else if (instancia == 4) {
+                InputManager.fecharScanner();
+                System.out.println("Jogo encerrado. Obrigado por jogar!");
+                rodando = false;
+            }
+
+            else if (instancia == 5) {
+                Lore.imprimir();
+            }
+
+            else if (instancia == 6) {
+                System.out.println(ConsoleColors.ORANGE + "GUILHERME RODRIGUES DA SILVA: "
+                        + ConsoleColors.RESET
+                        + "Aluno de Ciência da Computação na Universidade Estadual de Campinas (ingresso em 2024). Github: https://github.com/GS-Rodrigues)");
+
+                System.out.println(ConsoleColors.ORANGE + "GIOVANNI BARBOSA HERRERO: "
+                        + ConsoleColors.RESET
+                        + "Aluno de Ciência da Computação na Universidade Estadual de Campinas (ingresso em 2024). Github: https://github.com/GiovanniHerrero)");
+
+            }
         }
 
     }
