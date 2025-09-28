@@ -20,6 +20,10 @@ public abstract class Arma implements Item {
         return dano;
     }
 
+    public void setDano(int novoDano) {
+        this.dano = novoDano;
+    }
+
     public int getminNivel() {
         return minNivel;
     }
