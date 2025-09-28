@@ -31,9 +31,9 @@ public class MenuPrincipal {
         System.out.println(ConsoleColors.ORANGE + "[2]" + ConsoleColors.RESET + " Ver Informações dos Herois");
         System.out.println(ConsoleColors.ORANGE + "[3]" + ConsoleColors.RESET + " Ver Informações dos Monstros");
         System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Sair do Jogo");
-        System.out.println(ConsoleColors.ORANGE + "[5]" + ConsoleColors.RESET + " Ver Lore do Game");
-        System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Devs do Game");
-        System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Sair do Jogo");
+        System.out.println(ConsoleColors.ORANGE + "[5]" + ConsoleColors.RESET + " Ver Lore do Jogo");
+        System.out.println();
+        System.out.println(ConsoleColors.ORANGE + "[6]" + ConsoleColors.RESET + " Devs do Game");
         this.escolher();
     };
 
