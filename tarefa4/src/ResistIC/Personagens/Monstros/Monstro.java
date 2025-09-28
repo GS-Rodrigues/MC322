@@ -48,8 +48,12 @@ public abstract class Monstro extends Personagem implements Lootavel
         return listaDeArmasParaLargar[numeroAleatorio];
     };
 
-    public void setPontosDeVida(double fatorDeVariacao){
-        this.pontosDeVida = pontosDeVida*fatorDeVariacao;
+    public void setPontosDeVida(double fatorDeVariacao) {
+        this.pontosDeVida = pontosDeVida * fatorDeVariacao;
+    }
+    
+    public void setForca(double fatorDeVariacao) {
+        this.forca = forca * fatorDeVariacao;
     }
 
 }

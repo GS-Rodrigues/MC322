@@ -38,9 +38,10 @@ public class FaseDeCombate implements Fase {
         }
     }
     
-    //Adequa a vida dos monstros em função da dificuldade selecionada pelo usuário
+    //Adequa a vida e a força dos monstros (pelo mesmo fator) em função da dificuldade selecionada pelo usuário
     private void adequarInimigosDificuldade(){ 
-        this.monstro.setPontosDeVida(dificuldade.getMultiplicadorVidaMonstro());
+        this.monstro.setPontosDeVida(dificuldade.getMultiplicadorForcaVidaMonstro());
+        this.monstro.setForca(dificuldade.getMultiplicadorForcaVidaMonstro());
     }
 
     public TipoCenario getTipoDeCenario()

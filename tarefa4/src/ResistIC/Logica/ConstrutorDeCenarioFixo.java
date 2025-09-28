@@ -6,9 +6,6 @@ import ResistIC.Personagens.Monstros.Corrupted_IA;
 import ResistIC.Personagens.Monstros.Enxame_Dados;
 import ResistIC.Personagens.Monstros.Monstro;
 import ResistIC.Personagens.Monstros.Monstro_IB;
-import ResistIC.itens.Armas.Arma;
-import ResistIC.itens.Armas.Codeblade;
-import ResistIC.itens.Armas.Turing_Hammer;
 
 
 public class ConstrutorDeCenarioFixo implements GeradorDeFases {
