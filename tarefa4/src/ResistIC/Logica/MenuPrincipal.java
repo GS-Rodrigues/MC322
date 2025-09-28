@@ -5,7 +5,7 @@ import ResistIC.Suporte.Lore;
 
 public class MenuPrincipal {
     public void escolher() {
-        int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 4);
+        int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 6);
         if (instancia == 1) {
             GameManager newgame = new GameManager();
             newgame.iniciar();

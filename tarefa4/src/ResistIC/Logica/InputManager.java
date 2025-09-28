@@ -48,14 +48,14 @@ public class InputManager {
         }
     };
 
-    // Exibe a mensagem (ex: Pressione ENTER para continuar...) e pausa a execu ̧c
-    // ̃ao at ́e que o usu ́ario pressione a tecla Enter.
+    // Exibe a mensagem (ex: Pressione ENTER para continuar...) e pausa a execução
+    // até que o usuário pressione a tecla Enter.
     public static void esperarEnter(String mensagem) {
         System.out.print(mensagem + " ");
         scanner.nextLine();
     };
 
-    // Exp ̃oe um m ́etodo para fechar o objeto Scanner subjacente, evitando
+    // Expõe um método para fechar o objeto Scanner subjacente, evitando
     // vazamento de recursos. Deve ser chamado uma ́unica vez no final do programa.
     public static void fecharScanner() {
         scanner.close();
