@@ -7,6 +7,7 @@ import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Codeblade;
+import ResistIC.itens.Armas.Cortex_Distorter;
 
 public class Monstro_IB extends Monstro {
     private static final String[] ataques = {
@@ -21,7 +22,7 @@ public class Monstro_IB extends Monstro {
     Random gerador = new Random();
 
     public Monstro_IB() {
-        super("Monstro_IB", 100, 20, 100, new Codeblade(10, 1));
+        super("Monstro_IB", 100, 20, 100, new Cortex_Distorter());
     }
 
     public Item droparLoot() {

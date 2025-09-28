@@ -6,12 +6,12 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
-import ResistIC.itens.Armas.Codeblade;
+import ResistIC.itens.Armas.PixelStorm;
 import ResistIC.itens.Armas.Turing_Hammer;
 
 public class Corrupted_IA extends Monstro {
     public Corrupted_IA() {
-        super("Corrupted_IA", 150, 30, 150, new Codeblade(10, 1));
+        super("Corrupted_IA", 150, 30, 150, new PixelStorm());
     }
 
     private static final String[] ataques = {

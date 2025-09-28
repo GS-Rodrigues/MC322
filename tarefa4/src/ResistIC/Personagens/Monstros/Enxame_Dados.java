@@ -7,6 +7,7 @@ import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Codeblade;
+import ResistIC.itens.Armas.Quanta_Cutter;
 
 public class Enxame_Dados extends Monstro {
     private static final String[] ataques = {
@@ -21,7 +22,7 @@ public class Enxame_Dados extends Monstro {
     Random gerador = new Random();
 
     public Enxame_Dados() {
-        super("Enxame de Dados", 200, 40, 200, new Codeblade(10, 1));
+        super("Enxame de Dados", 200, 40, 200,new Quanta_Cutter());
     }
 
     public Item droparLoot() {
