@@ -6,6 +6,7 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
+import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Cortex_Distorter;
 
@@ -25,7 +26,8 @@ public class Genomex extends Monstro {
         super("Genomex", 100, 20, 100, new Cortex_Distorter());
     }
 
-    public String descricao = "Genomex foi criado como uma simulação evolutiva de organismos digitais"
+    public static final String descricao = ConsoleColors.PURPLE + "Genomex" + ConsoleColors.RESET
+    + ": Genomex foi criado como uma simulação evolutiva de organismos digitais"
     + "— mas ele escapou do ambiente de teste. Com código genético mutável e uma IA adaptativa, ele evolui a cada conflito."
     + " Seus ataques são imprevisíveis, e sua forma nunca é a mesma por muito tempo."
     + " O combate contra Genomex é uma corrida entre sua evolução e sua destruição.";

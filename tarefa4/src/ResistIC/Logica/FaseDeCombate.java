@@ -14,12 +14,13 @@ public class FaseDeCombate implements Fase {
     
 
 
-    public FaseDeCombate(int numero_da_fase, String ambiente, Monstro monstro, TipoCenario Tipo_de_Cenario,Enum<Dificuldade> dificuldade)
+    public FaseDeCombate(int numero_da_fase, String ambiente, Monstro monstro, TipoCenario Tipo_de_Cenario,Dificuldade dificuldade)
     {
         this.numero_da_fase = numero_da_fase;
         this.ambiente = ambiente;
         this.monstro = monstro;
         this.Tipo_de_Cenario = Tipo_de_Cenario;
+        this.dificuldade = dificuldade;
         adequarInimigosDificuldade();
     }
 

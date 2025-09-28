@@ -16,8 +16,8 @@ public class GameManager {
                     .lerInteiro("Selecione a dificuldade: Pressione 1: FÁCIL\n 2: NORMAL\n 3: DIFÍCIL", 1, 3);
             String string_heroi = InputManager.lerString("Qual heroi você deseja escolher? (Lehilton/Marcelo)");
 
-            Dificuldade dificuldade_de_jogo;
-            switch (dificuldade) {
+            Dificuldade dificuldade_de_jogo = Dificuldade.NORMAL;
+/*             switch (dificuldade) {
                 case 1:
                     dificuldade_de_jogo = Dificuldade.FACIL;
                     break;
@@ -27,11 +27,11 @@ public class GameManager {
                 case 3:
                     dificuldade_de_jogo = Dificuldade.DIFICL;
                     break;
-            }
+            } */
 
             String nome_do_jogador = InputManager.lerString("Digite o nome do seu personagem: ");
-            Heroi heroi;
-            switch (string_heroi) {
+            Heroi heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
+/*             switch (string_heroi) {
                 case "Lehilton":
                 case "lehilton":
                     heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
@@ -40,7 +40,7 @@ public class GameManager {
                 case "marcelo":
                     heroi = new Marcelo(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
                     break;
-            }
+            } */
 
             ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(quantidade_de_fases, dificuldade_de_jogo);
 

@@ -1,11 +1,13 @@
 package ResistIC.Personagens.Monstros;
 
+import java.io.Console;
 import java.util.Random;
 
 import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
+import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Quanta_Cutter;
 
@@ -25,12 +27,13 @@ public class Canvaspecter extends Monstro {
         super("Canvaspecter", 200, 40, 200,new Quanta_Cutter());
     }
 
-    public String descricao = "Nascido do código inacabado de uma instalação artística digital, Canvaspecter é um espectro"
+    public static final String descricao = ConsoleColors.PURPLE + "Canvaspecter" + ConsoleColors.RESET
+    +": Nascido do código inacabado de uma instalação artística digital, Canvaspecter é um espectro"
     + " errante que habita espaços de memória corrompida. Sua forma oscila entre camadas de glitchs visuais e traços de pincel vetorial."
     + " Não ataca com força, mas distorce a percepção da realidade, fazendo com que o próprio cenário vire uma armadilha.";
 
     public Item droparLoot() {
-        Item item = new Codeblade(this.forca, forca / 20);
+        Item item = new Codeblade();
         return item;
     }
 

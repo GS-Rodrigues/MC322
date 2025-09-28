@@ -2,6 +2,9 @@ package ResistIC.Logica;
 
 import ResistIC.Personagens.Herois.Lehilton;
 import ResistIC.Personagens.Herois.Marcelo;
+import ResistIC.Personagens.Monstros.Canvaspecter;
+import ResistIC.Personagens.Monstros.Chronoloop;
+import ResistIC.Personagens.Monstros.Genomex;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.Suporte.Lore;
 
@@ -10,6 +13,7 @@ public class MenuPrincipal {
         boolean rodando = true;
         while (rodando) {
             int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 6);
+            System.out.println();
             if (instancia == 1) {
                 GameManager newgame = new GameManager();
                 newgame.iniciar();
@@ -17,11 +21,14 @@ public class MenuPrincipal {
 
             else if (instancia == 2) {
                 System.out.println(Lehilton.descricao);
+                System.out.println();
                 System.out.println(Marcelo.descricao);
             }
 
             else if (instancia == 3) {
-                System.out.println(ConsoleColors.ORANGE + "Desculpe, ainda estamos desenvolvendo essa funcionalidade!");
+                System.out.println(Canvaspecter.descricao + "\n");
+                System.out.println(Chronoloop.descricao + "\n");
+                System.out.println(Genomex.descricao + "\n");
             }
 
             else if (instancia == 4) {
@@ -44,6 +51,7 @@ public class MenuPrincipal {
                         + "Aluno de Ciência da Computação na Universidade Estadual de Campinas (ingresso em 2024). Github: https://github.com/GiovanniHerrero)");
 
             }
+            System.out.println();
         }
 
     }
@@ -58,7 +66,6 @@ public class MenuPrincipal {
         System.out.println(ConsoleColors.ORANGE + "[3]" + ConsoleColors.RESET + " Ver Informações dos Monstros");
         System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Sair do Jogo");
         System.out.println(ConsoleColors.ORANGE + "[5]" + ConsoleColors.RESET + " Ver Lore do Jogo");
-        System.out.println();
         System.out.println(ConsoleColors.ORANGE + "[6]" + ConsoleColors.RESET + " Devs do Game");
         this.escolher();
     };

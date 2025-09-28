@@ -29,7 +29,7 @@ public class Lehilton extends Heroi {
 
     public static final String descricao = ConsoleColors.YELLOW + "LEHILTON LELIS CHAVES PEDROSA\n"
     + ConsoleColors.CYAN + "Especialidades: " + ConsoleColors.RESET + "Projeto e Análise de Algoritmos, Otimização Combinatória, Algoritmos parametrizados, Algoritmos de Aproximação, Teoria de Grafos, Pesquisa Operacional\n"
-    + ConsoleColors.CYAN + "Unidade: " + ConsoleColors.RESET + "Exército da resistência de Brasília";
+    + ConsoleColors.CYAN + "Unidade: " + ConsoleColors.RESET + "Exército da Resistência de Brasília";
     
     @Override
     public String[] getDescricoesDeAtaque() {

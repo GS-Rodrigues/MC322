@@ -6,6 +6,7 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
+import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.PixelStorm;
 import ResistIC.itens.Armas.Turing_Hammer;
 
@@ -24,7 +25,8 @@ public class Chronoloop extends Monstro {
 
     Random gerador = new Random();
 
-    public String descricao = "Resultado de um experimento falho do Instituto de Física com loops temporais, "
+    public static final String descricao = ConsoleColors.PURPLE + "Chronoloop" + ConsoleColors.RESET
+    +": Resultado de um experimento falho do Instituto de Física com loops temporais, "
     + "ChronoLoop é um robô preso entre instantes de tempo. Ele vive o mesmo segundo infinitas vezes "
     + "— mas com cada repetição, aprende, recalibra e reage mais rápido. Vencê-lo é possível, mas só se você entender quando"
     + " atacar, e não apenas como.";
@@ -40,7 +42,7 @@ public class Chronoloop extends Monstro {
     }
 
     public Item droparLoot() {
-        Item item = new Turing_Hammer(this.forca, forca / 20);
+        Item item = new Turing_Hammer();
         return item;
     }
 }
