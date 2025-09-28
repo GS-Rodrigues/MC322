@@ -9,9 +9,9 @@ import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.PixelStorm;
 import ResistIC.itens.Armas.Turing_Hammer;
 
-public class Corrupted_IA extends Monstro {
-    public Corrupted_IA() {
-        super("Corrupted_IA", 150, 30, 150, new PixelStorm());
+public class Chronoloop extends Monstro {
+    public Chronoloop() {
+        super("Chronoloop", 150, 30, 150, new PixelStorm());
     }
 
     private static final String[] ataques = {
@@ -24,6 +24,11 @@ public class Corrupted_IA extends Monstro {
 
     Random gerador = new Random();
 
+    public String descricao = "Resultado de um experimento falho do Instituto de Física com loops temporais, "
+    + "ChronoLoop é um robô preso entre instantes de tempo. Ele vive o mesmo segundo infinitas vezes "
+    + "— mas com cada repetição, aprende, recalibra e reage mais rápido. Vencê-lo é possível, mas só se você entender quando"
+    + " atacar, e não apenas como.";
+    
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;

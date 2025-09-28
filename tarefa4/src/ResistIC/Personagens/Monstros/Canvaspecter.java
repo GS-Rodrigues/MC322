@@ -7,9 +7,9 @@ import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
 import ResistIC.itens.Armas.Codeblade;
-import ResistIC.itens.Armas.Cortex_Distorter;
+import ResistIC.itens.Armas.Quanta_Cutter;
 
-public class Monstro_IB extends Monstro {
+public class Canvaspecter extends Monstro {
     private static final String[] ataques = {
             "invade o sistema, corrompendo suas defesas!",
             "lança milhares de pacotes binários como insetos digitais contra você!",
@@ -21,9 +21,13 @@ public class Monstro_IB extends Monstro {
 
     Random gerador = new Random();
 
-    public Monstro_IB() {
-        super("Monstro_IB", 100, 20, 100, new Cortex_Distorter());
+    public Canvaspecter() {
+        super("Canvaspecter", 200, 40, 200,new Quanta_Cutter());
     }
+
+    public String descricao = "Nascido do código inacabado de uma instalação artística digital, Canvaspecter é um espectro"
+    + " errante que habita espaços de memória corrompida. Sua forma oscila entre camadas de glitchs visuais e traços de pincel vetorial."
+    + " Não ataca com força, mas distorce a percepção da realidade, fazendo com que o próprio cenário vire uma armadilha.";
 
     public Item droparLoot() {
         Item item = new Codeblade(this.forca, forca / 20);

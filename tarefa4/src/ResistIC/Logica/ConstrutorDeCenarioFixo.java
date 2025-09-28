@@ -2,10 +2,10 @@ package ResistIC.Logica;
 import java.util.ArrayList;
 
 import ResistIC.Interfaces.GeradorDeFases;
-import ResistIC.Personagens.Monstros.Corrupted_IA;
-import ResistIC.Personagens.Monstros.Enxame_Dados;
+import ResistIC.Personagens.Monstros.Chronoloop;
+import ResistIC.Personagens.Monstros.Canvaspecter;
 import ResistIC.Personagens.Monstros.Monstro;
-import ResistIC.Personagens.Monstros.Monstro_IB;
+import ResistIC.Personagens.Monstros.Genomex;
 
 
 public class ConstrutorDeCenarioFixo implements GeradorDeFases {
@@ -26,7 +26,7 @@ public class ConstrutorDeCenarioFixo implements GeradorDeFases {
         TipoCenario.INSTITUTO_DE_EXATAS
     };
     
-    private static final Monstro[] monstros = { new Monstro_IB(), new Corrupted_IA(), new Enxame_Dados() };
+    private static final Monstro[] monstros = { new Genomex(), new Chronoloop(), new Canvaspecter() };
 
     public ArrayList<FaseDeCombate> gerar(int nFases, Dificuldade Dificuldade)
     {
