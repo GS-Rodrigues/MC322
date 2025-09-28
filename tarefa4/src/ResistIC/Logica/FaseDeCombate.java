@@ -10,7 +10,7 @@ public class FaseDeCombate implements Fase {
     private String ambiente;
     private Monstro monstro;
     private TipoCenario Tipo_de_Cenario;
-    private Enum<Dificuldade> dificuldade;
+    private Dificuldade dificuldade;
     
 
 
@@ -20,6 +20,7 @@ public class FaseDeCombate implements Fase {
         this.ambiente = ambiente;
         this.monstro = monstro;
         this.Tipo_de_Cenario = Tipo_de_Cenario;
+        adequarInimigosDificuldade();
     }
 
     public void iniciar(Heroi heroi)
@@ -39,7 +40,7 @@ public class FaseDeCombate implements Fase {
     
     //Adequa a vida dos monstros em função da dificuldade selecionada pelo usuário
     private void adequarInimigosDificuldade(){ 
-        this.monstro.s
+        this.monstro.setPontosDeVida(dificuldade.getMultiplicadorVidaMonstro());
     }
 
     public TipoCenario getTipoDeCenario()

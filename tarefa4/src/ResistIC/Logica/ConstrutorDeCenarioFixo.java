@@ -31,7 +31,7 @@ public class ConstrutorDeCenarioFixo implements GeradorDeFases {
     
     private static final Monstro[] monstros = { new Monstro_IB(), new Corrupted_IA(), new Enxame_Dados() };
 
-    public ArrayList<FaseDeCombate> gerar(int nFases, Enum<Dificuldade> Dificuldade)
+    public ArrayList<FaseDeCombate> gerar(int nFases, Dificuldade Dificuldade)
     {
 
         

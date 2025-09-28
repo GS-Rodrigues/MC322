@@ -8,7 +8,7 @@ public enum Dificuldade {
     private final double multiplicador_vida_monstro; //Fator de aumento/redução da vida do monstro
     private final double variacao_sorte_heroi; //variação na sorte do heroi
 
-    public double getMultiplicadorVidamonstro()
+    public double getMultiplicadorVidaMonstro()
     {
         return multiplicador_vida_monstro;
     }
