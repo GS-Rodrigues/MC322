@@ -1,6 +1,5 @@
 package ResistIC.Personagens.Monstros;
 
-import java.io.Console;
 import java.util.Random;
 
 import ResistIC.Habilidades.AtaqueBasico;

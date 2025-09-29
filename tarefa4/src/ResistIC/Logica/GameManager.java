@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import ResistIC.Personagens.Herois.*;
 import ResistIC.Personagens.Monstros.Monstro;
+import ResistIC.Suporte.ConsoleColors;
 
 public class GameManager {
 
@@ -91,25 +92,67 @@ public class GameManager {
 
                 // Iniciando a fase. OBS: o método getTipoCenario é chamado dentro de
                 // "iniciar(heroi)"
-                fase_atual.iniciar(heroi);
 
-                // Laço de combate para cada monstro da fase
                 if (heroi.estaVivo()) {
-                    Monstro monstro_atual = fase_atual.getMonstro();
-                    System.out.println("O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
+                    fase_atual.iniciar(heroi);
 
-                    // Laço while para verificar se os combatentes estão vivos
-                    while (heroi.estaVivo() && monstro_atual.estaVivo()) {
-                        heroi.escolherAcao(monstro_atual).executar(heroi, monstro_atual);
+                    // Laço de combate para cada monstro da fase
+                    if (heroi.estaVivo()) {
+                        Monstro monstro_atual = fase_atual.getMonstro();
+                        System.out.println("O inimigo " + monstro_atual.getNome() + " aparece na arena de combate!");
 
-                        if (monstro_atual.estaVivo()) {
-                            monstro_atual.escolherAcao(heroi).executar(monstro_atual, heroi);
-                        }
+                        // Laço while para verificar se os combatentes estão vivos
+                        while (heroi.estaVivo() && monstro_atual.estaVivo()) {
+                            heroi.escolherAcao(monstro_atual).executar(heroi, monstro_atual);
 
-                        else {
-                            heroi.definir_sorte();
-                            if (heroi.getSorte() >= 0.75) {
-                                heroi.equiparArma(Monstro.largaArma());
+                            if (monstro_atual.estaVivo()) {
+                                monstro_atual.escolherAcao(heroi).executar(monstro_atual, heroi);
+                            }
+
+                            else {
+                                if (i == fases.size() - 1) {
+                                    break;
+                                }
+                                //Menu Pós-Turno
+                                else 
+                                {
+                                    System.out.println(ConsoleColors.ORANGE + "[1]" + ConsoleColors.RESET + " Interagir com Loot");
+                                    System.out.println(ConsoleColors.ORANGE + "[2]" + ConsoleColors.RESET + " Ver Informações do Personagem");
+                                    System.out.println(ConsoleColors.ORANGE + "[3]" + ConsoleColors.RESET + " Desistir do Jogo");
+                                    System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Seguir Adiante");
+                                }
+                                
+                                boolean rodando = true;
+                                
+                                while (rodando)
+                                {
+                                    int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 4);
+                                    System.out.println();
+                                    //Interagir com LOOT
+                                    if (instancia == 1) {
+                                        heroi.definir_sorte();
+                                        if (heroi.getSorte() >= 0.75) {
+                                            heroi.equiparArma(Monstro.largaArma());
+                                    }
+                                    }
+                                    
+                                    //Ver informações do personagem
+                                    else if (instancia == 2) {
+                                        heroi.exibirStatus();
+                                    }
+                                    //Desistir do jogo
+                                    else if (instancia == 3) {
+                                        rodando = false;
+                                        heroi.receberDano(heroi.getVida());
+                                        MenuPrincipal novoMenuPrincipal = new MenuPrincipal();
+                                        novoMenuPrincipal.exibirmenu();
+                                        ;
+                                    }
+                                    else if (instancia == 4) {
+                                        rodando = false;
+                                    }
+                                }
+                                
                             }
                         }
                     }
@@ -123,6 +166,8 @@ public class GameManager {
                 System.out.println("Parabens, você conseguiu salvar nossa comunidade!");
             } else {
                 System.out.println("Você Falhou na Missão, e todo o IC foi dominado pelas máquinas...");
+                MenuPrincipal novoMenuPrincipal = new MenuPrincipal();
+                novoMenuPrincipal.exibirmenu();
             }
         } catch (
 
