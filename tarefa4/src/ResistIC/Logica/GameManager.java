@@ -16,11 +16,8 @@ public class GameManager {
             int dificuldade = InputManager
                     .lerInteiro("Selecione a dificuldade. Digite \n1: FÁCIL\n2: NORMAL\n3: DIFÍCIL\nE dê ENTER -->", 1,
                             3);
-            System.out.println();
-            String string_heroi = InputManager.lerString("Qual heroi você deseja escolher? (Lehilton/Marcelo)-->");
-
-            Dificuldade dificuldade_de_jogo = Dificuldade.NORMAL;
-/*             switch (dificuldade) {
+            Dificuldade dificuldade_de_jogo;
+            switch (dificuldade) {
                 case 1:
                     dificuldade_de_jogo = Dificuldade.FACIL;
                     break;
@@ -28,13 +25,41 @@ public class GameManager {
                     dificuldade_de_jogo = Dificuldade.NORMAL;
                     break;
                 case 3:
-                    dificuldade_de_jogo = Dificuldade.DIFICL;
+                    dificuldade_de_jogo = Dificuldade.DIFICIL;
                     break;
-            } */
+                default:
+                    dificuldade_de_jogo = Dificuldade.NORMAL;
+            }
+            System.out.println();
 
-            String nome_do_jogador = InputManager.lerString("Digite o nome do seu personagem: ");
+
+            String nome_do_jogador;
+            do
+            {
+                nome_do_jogador = InputManager.lerString("Digite o nome do seu personagem: ");
+                if (nome_do_jogador == "") {
+                    System.out.println(
+                            "O nome não pode ser vazio! Você deve escolher um nome válido para seu personagem!");
+                }
+            }
+            while (nome_do_jogador == "");
+
+
+            String string_heroi;
+            do {
+                string_heroi = InputManager.lerString("Qual herói você deseja escolher? (Lehilton/Marcelo) -->").trim();
+
+                if (!string_heroi.equalsIgnoreCase("Lehilton") && !string_heroi.equalsIgnoreCase("Marcelo")) {
+                    System.out.println("Você deve escolher somente Lehilton ou Marcelo.");
+                }
+            } while (!string_heroi.equalsIgnoreCase("Lehilton") && !string_heroi.equalsIgnoreCase("Marcelo"));
+
+
+
+            
+            if (string_heroi == "Lehilton".toLowerCase()){}
             Heroi heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
-/*             switch (string_heroi) {
+            switch (string_heroi) {
                 case "Lehilton":
                 case "lehilton":
                     heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
@@ -43,7 +68,7 @@ public class GameManager {
                 case "marcelo":
                     heroi = new Marcelo(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
                     break;
-            } */
+            }
 
             ArrayList<FaseDeCombate> fases = gerador_de_fases.gerar(quantidade_de_fases, dificuldade_de_jogo);
 

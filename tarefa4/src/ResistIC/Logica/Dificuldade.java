@@ -3,7 +3,7 @@ package ResistIC.Logica;
 public enum Dificuldade {
     FACIL(0.75, 0.2),
     NORMAL(1.0, 0.0),
-    DIFICL(1.5, -0.2);
+    DIFICIL(1.5, -0.2);
 
     private final double multiplicador_forca_vida_monstro; //Fator de aumento/redução da vida e da força do monstro
     private final double variacao_sorte_heroi; //variação na sorte do heroi
