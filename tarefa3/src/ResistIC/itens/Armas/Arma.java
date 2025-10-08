@@ -1,5 +1,8 @@
 package ResistIC.itens.Armas;
-public abstract class Arma {
+
+import ResistIC.Interfaces.Item;
+
+public abstract class Arma implements Item{
     private int dano;
     private int minNivel;
 
@@ -17,6 +20,10 @@ public abstract class Arma {
 
     public int getminNivel() {
         return minNivel;
+    }
+
+    public String getNome() {
+        return this.getClass().getSimpleName();
     }
 
 }
