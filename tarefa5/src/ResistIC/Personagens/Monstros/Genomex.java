@@ -6,10 +6,11 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
 import ResistIC.Interfaces.Item;
-import ResistIC.itens.Armas.Arma;
+import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Codeblade;
+import ResistIC.itens.Armas.Cortex_Distorter;
 
-public class Enxame_Dados extends Monstro {
+public class Genomex extends Monstro {
     private static final String[] ataques = {
             "invade o sistema, corrompendo suas defesas!",
             "lança milhares de pacotes binários como insetos digitais contra você!",
@@ -21,18 +22,24 @@ public class Enxame_Dados extends Monstro {
 
     Random gerador = new Random();
 
-    public Enxame_Dados(String nome, int pontosDeVida, int forca, Arma arma) {
-        super(nome, pontosDeVida, forca, 100, arma);
+    public Genomex() {
+        super("Genomex", 100, 20, 100, new Cortex_Distorter());
+    }
+
+    public static final String descricao = ConsoleColors.PURPLE + "Genomex" + ConsoleColors.RESET
+    + ": Genomex foi criado como uma simulação evolutiva de organismos digitais"
+    + "— mas ele escapou do ambiente de teste. Com código genético mutável e uma IA adaptativa, ele evolui a cada conflito."
+    + " Seus ataques são imprevisíveis, e sua forma nunca é a mesma por muito tempo."
+    + " O combate contra Genomex é uma corrida entre sua evolução e sua destruição.";
+
+    public Item droparLoot() {
+        Item item = new Codeblade();
+        return item;
     }
 
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;
-    }
-
-    public Item droparLoot() {
-    Item item = new Codeblade(this.forca, forca / 20);
-        return item;
     }
 
     @Override

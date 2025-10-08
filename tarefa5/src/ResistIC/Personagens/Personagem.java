@@ -1,0 +1,61 @@
+package ResistIC.Personagens;
+import ResistIC.Interfaces.AcaoDeCombate;
+import ResistIC.Interfaces.Combatente;
+import ResistIC.Suporte.ConsoleColors;
+import ResistIC.itens.Armas.Arma;
+
+
+public abstract class Personagem implements Combatente
+{
+    protected String nome;
+    protected int pontosDeVida;
+    protected int forca;
+    protected Arma arma;
+
+    public Personagem(String nome, int pontosDeVida, int forca, Arma arma) 
+    {
+        this.nome = nome;
+        this.pontosDeVida = pontosDeVida;
+        this.forca = forca;
+        this.arma = arma;
+    }
+
+    public void receberDano(int dano) 
+    {
+        pontosDeVida = pontosDeVida - dano;
+    }
+    
+        public void receberCura(int cura) 
+    {
+        pontosDeVida = pontosDeVida + cura;
+    }
+
+    public boolean estaVivo() 
+    {
+        return pontosDeVida > 0;
+    }
+    
+    public void exibirStatus() {
+        String classe = this.getClass().getSimpleName(); // pega só "Lehilton", não "class Lehilton"
+
+        System.out.println(ConsoleColors.BLUE + "=============== STATUS PERSONAGEM ===============" + ConsoleColors.RESET);
+        System.out.println("👤 Classe: " + ConsoleColors.ORANGE + classe + ConsoleColors.RESET);
+        System.out.println("📛 Nome:   " + ConsoleColors.CYAN + nome + ConsoleColors.RESET);
+        System.out.println("❤️ Vida:   " + ConsoleColors.RED + pontosDeVida + ConsoleColors.RESET);
+        System.out.println("⚔️ Força:  " + ConsoleColors.GREEN + forca + ConsoleColors.RESET);
+    }
+
+
+    // Getters para subclasses conseguirem acessarem
+    public String getNome() { return nome; }
+    public int getVida() { return pontosDeVida; }
+    public int getForca() { return forca; }
+    public Arma getArma() { return arma; }
+    
+    public void setArma(Arma novaArma) {
+        this.arma = novaArma;
+    }
+
+    public abstract AcaoDeCombate escolherAcao(Combatente alvo);
+    
+}
