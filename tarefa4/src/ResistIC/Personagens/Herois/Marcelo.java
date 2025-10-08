@@ -3,12 +3,17 @@ import ResistIC.Habilidades.AtaqueBasico;
 import ResistIC.Habilidades.HabilidadeEspecial;
 import ResistIC.Interfaces.AcaoDeCombate;
 import ResistIC.Interfaces.Combatente;
-import ResistIC.itens.Armas.Arma;
+import ResistIC.Suporte.ConsoleColors;
+import ResistIC.itens.Armas.Turing_Hammer;
 
 public class Marcelo extends Heroi {
 
-    public Marcelo(String nome, int vida, int forca, Arma arma) {
-        super(nome, vida, forca, arma);
+    public Marcelo(String nome, double variacao_sorte_heroi) {
+        super(nome, new Turing_Hammer(), variacao_sorte_heroi);
+        AcaoDeCombate ataqueBasico = new AtaqueBasico(ataques);
+        AcaoDeCombate habilidade = new HabilidadeEspecial(especialidade);
+        this.addAcao(habilidade);
+        this.addAcao(ataqueBasico);
     }
 
     private String especialidade = "Identificação de padrões";
@@ -21,6 +26,10 @@ public class Marcelo extends Heroi {
             "gera padrões de combate imprevisíveis com uma rede neural combativa, quebrando o sistema de decisão do inimigo!"
     };
 
+    public static final String descricao = ConsoleColors.YELLOW + "MARCELO DA SILVA REIS\n"
+    + ConsoleColors.CYAN + "Especialidades: " + ConsoleColors.RESET + "Aprendizado de máquina em Bioinformática, saúde e bem estar dos combatentes, processamento de linguagem natural e sistemas de recomendação\n"
+    + ConsoleColors.CYAN + "Unidade: " + ConsoleColors.RESET + "Batalhão de Resistência Campineira";
+    
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;

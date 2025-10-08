@@ -29,6 +29,11 @@ public class Corrupted_IA extends Monstro {
         return ataques;
     }
 
+    public Item droparLoot() {
+        Item item = new Turing_Hammer(this.forca, forca / 20);
+        return item;
+    }
+
     @Override
     public AcaoDeCombate escolherAcao(Combatente alvo) {
         return new AtaqueBasico(ataques);

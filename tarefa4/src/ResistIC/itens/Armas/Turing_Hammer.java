@@ -4,9 +4,9 @@ import ResistIC.Suporte.ConsoleColors;
 public class Turing_Hammer extends Arma 
 {
 
-    public Turing_Hammer(int dano, int minNivel) 
+    public Turing_Hammer() 
     {
-        super(dano, minNivel);
+        super(10, 1);
 
     }
 

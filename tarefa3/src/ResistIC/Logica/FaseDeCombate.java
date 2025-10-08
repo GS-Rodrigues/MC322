@@ -21,18 +21,18 @@ public class FaseDeCombate implements Fase {
 
     public void iniciar(Heroi heroi)
     {
+        if (heroi.estaVivo()) {
             this.Tipo_de_Cenario.apresentarInformacoesCenario();
             System.out.println(this.getAmbiente());
-        try
-        {
-            Thread.sleep(4000);
-            heroi.exibirStatus();
-        }
+            try {
+                Thread.sleep(4000);
+                heroi.exibirStatus();
+            }
 
-        catch(InterruptedException e)
-        {
-            e.printStackTrace();
-            ;
+            catch (InterruptedException e) {
+                e.printStackTrace();
+                ;
+            }
         }
     }
 

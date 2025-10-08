@@ -15,14 +15,16 @@ public abstract class Heroi extends Personagem {
     private int experiencia;
     private int pontos_para_proximo_nivel;
     private double sorte;
+    private double variacao_sorte_heroi;
     private List<AcaoDeCombate> acoes;
 
-    public Heroi(String nome, int vida, int forca, Arma arma) {
-        super(nome, vida, forca, arma);
+    public Heroi(String nome, Arma arma, double variacao_sorte_heroi) {
+        super(nome,  200,  100, arma);
         this.nivel = 1;
         this.experiencia = 0;
         this.pontos_para_proximo_nivel = 100;
         this.acoes = new ArrayList<>();
+        this.variacao_sorte_heroi = variacao_sorte_heroi;
 
     }
 
@@ -68,7 +70,7 @@ public abstract class Heroi extends Personagem {
     Random gerador = new Random();
 
     public void definir_sorte() {
-        this.sorte = gerador.nextDouble();
+        this.sorte = gerador.nextDouble() + variacao_sorte_heroi;
     }
 
     @Override

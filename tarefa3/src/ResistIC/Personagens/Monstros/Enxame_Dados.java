@@ -35,6 +35,11 @@ public class Enxame_Dados extends Monstro {
         return ataques;
     }
 
+    public Item droparLoot() {
+    Item item = new Codeblade(this.forca, forca / 20);
+        return item;
+    }
+
     @Override
     public AcaoDeCombate escolherAcao(Combatente alvo) {
         return new AtaqueBasico(ataques);

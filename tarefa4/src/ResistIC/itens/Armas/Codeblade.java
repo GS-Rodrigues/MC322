@@ -3,8 +3,8 @@ import ResistIC.Suporte.ConsoleColors;
 
 public class Codeblade extends Arma {
 
-    public Codeblade(int dano, int minNivel) {
-        super(dano, minNivel);
+    public Codeblade() {
+        super(10, 1);
     }
 
     public void info() {

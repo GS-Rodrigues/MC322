@@ -1,4 +1,5 @@
 package ResistIC.Personagens.Monstros;
+
 import java.util.Random;
 
 import ResistIC.Interfaces.Lootavel;
