@@ -6,7 +6,7 @@ import ResistIC.itens.Armas.Arma;
  * Define o comportamento essencial de um combatente no RPG.
  *
  * <p>
- * Um {@code Combatente} pode atacar, receber dano, curar-se e escolher
+ * Um {@code Combatente} pode atacar, receber danmo, curar e escolher
  * uma ação de combate a ser executada contra outro combatente.
  * </p>
  *
