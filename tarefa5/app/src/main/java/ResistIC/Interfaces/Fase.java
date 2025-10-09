@@ -4,7 +4,7 @@ import ResistIC.Logica.TipoCenario;
 import ResistIC.Personagens.Herois.Heroi;
 
 /**
- * Define o comportamento básico de uma {@code Fase} em um RPG.
+ * Representa uma área ou nível do jogo com um objetivo.
  *
  * <p>
  * Uma {@code Fase} sempre precisa de um {@link Heroi} e de um cenário para ser
