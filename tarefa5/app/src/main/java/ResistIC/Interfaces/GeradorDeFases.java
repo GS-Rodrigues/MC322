@@ -3,7 +3,6 @@ package ResistIC.Interfaces;
 import java.util.ArrayList;
 import ResistIC.Logica.Dificuldade;
 import ResistIC.Logica.FaseDeCombate;
-import ResistIC.Personagens.Herois.Heroi;
 
 /**
  * Representa um objeto capaz de gerar uma sequência de fases para o RPG.
