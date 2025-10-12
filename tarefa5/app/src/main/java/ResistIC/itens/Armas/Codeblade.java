@@ -54,8 +54,7 @@ public class Codeblade extends Arma {
     }
 
     /**
-     * Exibe no console as informações detalhadas da {@code Codeblade},
-     * incluindo nome, nível mínimo requerido e dano.
+     * Exibe as informações detalhadas da {@code Codeblade}.
      */
     @Override
     public void info() {
