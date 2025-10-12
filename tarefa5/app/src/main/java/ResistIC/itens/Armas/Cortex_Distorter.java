@@ -1,4 +1,5 @@
 package ResistIC.itens.Armas;
+
 import ResistIC.Suporte.ConsoleColors;
 
 /**
@@ -12,9 +13,16 @@ import ResistIC.Suporte.ConsoleColors;
  * Seu dano é de {@code 10}, e o nível mínimo exigido é {@code 1}.
  * </p>
  *
+ * 
+ * <p>
+ * O {@code Cortex_Distorter} herda os comportamentos básicos da classe {@link Arma} e
+ * sobrescreve o método {@link #info()}.
+ * </p>
+ * 
  * <p>
  * Essa arma é simbólica entre os rebeldes por permitir que a mente humana
- * “invada” o território das IAs, distorcendo seus próprios padrões de raciocínio.
+ * “invada” o território das IAs, distorcendo seus próprios padrões de
+ * raciocínio.
  * </p>
  *
  * @author Guilherme & Giovani
@@ -37,7 +45,8 @@ public class Cortex_Distorter extends Arma {
     @Override
     public void info() {
         System.out.println(ConsoleColors.BLUE + "=============== INFO ARMA ===============" + ConsoleColors.RESET);
-        System.out.println("⚔️ Arma:            " + ConsoleColors.RED + this.getClass().getSimpleName() + ConsoleColors.RESET);
+        System.out.println(
+                "⚔️ Arma:            " + ConsoleColors.RED + this.getClass().getSimpleName() + ConsoleColors.RESET);
         System.out.println("❤️ Nivel requerido: " + ConsoleColors.RED + this.getminNivel() + ConsoleColors.RESET);
         System.out.println("⭐ Dano:            " + ConsoleColors.GREEN + this.getdano() + ConsoleColors.RESET);
     }
