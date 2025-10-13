@@ -6,8 +6,43 @@ import ResistIC.Personagens.Herois.*;
 import ResistIC.Personagens.Monstros.Monstro;
 import ResistIC.Suporte.ConsoleColors;
 
+/**
+ * Gerencia o fluxo principal do jogo.
+ *
+ * <p>
+ * A classe {@code GameManager} é responsável por:
+ * <ul>
+ * <li>Inicializar o jogo, solicitando informações do jogador (nome, herói e
+ * dificuldade).</li>
+ * <li>Gerar as fases de combate através de
+ * {@link ConstrutorDeCenarioFixo}.</li>
+ * <li>Controlar o loop de jogo, incluindo combate entre herói e monstros.</li>
+ * <li>Gerenciar interações pós-turno, como loot, status do personagem e
+ * desistência.</li>
+ * <li>Exibir mensagens de vitória ou derrota ao final do jogo.</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * O método {@link #iniciar()} encapsula toda a lógica de execução do jogo,
+ * desde a seleção de opções até o combate final.
+ * </p>
+ *
+ * @author Guilherme & Giovani
+ * @version 1.0
+ * @since 2025-10-12
+ */
 public class GameManager {
 
+    /**
+     * Inicia o jogo.
+     *
+     * <p>
+     * Solicita nome do jogador, escolha do herói e dificuldade, gera as fases
+     * e executa o loop de combate até que todas as fases sejam concluídas
+     * ou o herói morra.
+     * </p>
+     */
     public void iniciar() {
         try {
 
@@ -33,18 +68,14 @@ public class GameManager {
             }
             System.out.println();
 
-
             String nome_do_jogador;
-            do
-            {
+            do {
                 nome_do_jogador = InputManager.lerString("Digite o nome do seu personagem: ");
                 if (nome_do_jogador == "") {
                     System.out.println(
                             "O nome não pode ser vazio! Você deve escolher um nome válido para seu personagem!");
                 }
-            }
-            while (nome_do_jogador == "");
-
+            } while (nome_do_jogador == "");
 
             String string_heroi;
             do {
@@ -55,10 +86,8 @@ public class GameManager {
                 }
             } while (!string_heroi.equalsIgnoreCase("Lehilton") && !string_heroi.equalsIgnoreCase("Marcelo"));
 
-
-
-            
-            if (string_heroi == "Lehilton".toLowerCase()){}
+            if (string_heroi == "Lehilton".toLowerCase()) {
+            }
             Heroi heroi = new Lehilton(nome_do_jogador, dificuldade_de_jogo.getVariacaoSorteHeroi());
             switch (string_heroi) {
                 case "Lehilton":
@@ -83,8 +112,6 @@ public class GameManager {
             }
             System.out.println();
             System.out.println();
-
-
 
             // Laço de repetição principal
             for (int i = 0; i < fases.size(); i++) {
@@ -113,46 +140,47 @@ public class GameManager {
                                 if (i == fases.size() - 1) {
                                     break;
                                 }
-                                //Menu Pós-Turno
-                                else 
-                                {
-                                    System.out.println(ConsoleColors.ORANGE + "[1]" + ConsoleColors.RESET + " Interagir com Loot");
-                                    System.out.println(ConsoleColors.ORANGE + "[2]" + ConsoleColors.RESET + " Ver Informações do Personagem");
-                                    System.out.println(ConsoleColors.ORANGE + "[3]" + ConsoleColors.RESET + " Desistir do Jogo");
-                                    System.out.println(ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Seguir Adiante");
+                                // Menu Pós-Turno
+                                else {
+                                    System.out.println(
+                                            ConsoleColors.ORANGE + "[1]" + ConsoleColors.RESET + " Interagir com Loot");
+                                    System.out.println(ConsoleColors.ORANGE + "[2]" + ConsoleColors.RESET
+                                            + " Ver Informações do Personagem");
+                                    System.out.println(
+                                            ConsoleColors.ORANGE + "[3]" + ConsoleColors.RESET + " Desistir do Jogo");
+                                    System.out.println(
+                                            ConsoleColors.ORANGE + "[4]" + ConsoleColors.RESET + " Seguir Adiante");
                                 }
-                                
+
                                 boolean rodando = true;
-                                
-                                while (rodando)
-                                {
+
+                                while (rodando) {
                                     int instancia = InputManager.lerInteiro("Digite sua Opção> ", 1, 4);
                                     System.out.println();
-                                    //Interagir com LOOT
+                                    // Interagir com LOOT
                                     if (instancia == 1) {
                                         heroi.definir_sorte();
                                         if (heroi.getSorte() >= 0.75) {
                                             heroi.equiparArma(Monstro.largaArma());
+                                        }
                                     }
-                                    }
-                                    
-                                    //Ver informações do personagem
+
+                                    // Ver informações do personagem
                                     else if (instancia == 2) {
                                         heroi.exibirStatus();
                                     }
-                                    //Desistir do jogo
+                                    // Desistir do jogo
                                     else if (instancia == 3) {
                                         rodando = false;
                                         heroi.receberDano(heroi.getVida());
                                         MenuPrincipal novoMenuPrincipal = new MenuPrincipal();
                                         novoMenuPrincipal.exibirmenu();
                                         ;
-                                    }
-                                    else if (instancia == 4) {
+                                    } else if (instancia == 4) {
                                         rodando = false;
                                     }
                                 }
-                                
+
                             }
                         }
                     }
