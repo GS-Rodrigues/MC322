@@ -2,11 +2,34 @@ package ResistIC.Logica;
 
 import java.util.Scanner;
 
+/**
+ * Gerencia a entrada de dados do usuário.
+ *
+ * <p>
+ * A classe {@code InputManager} fornece métodos estáticos para ler as entradas
+ * do usuário.
+ * </p>
+ *
+ * <p>
+ * Todos os métodos usam internamente um {@link Scanner} único e estático.
+ * </p>
+ *
+ * @author Guilherme & Giovani
+ * @version 1.0
+ * @since 2025-10-12
+ */
 public class InputManager {
+    /** Scanner único para capturar entradas do usuário. */
     private static final Scanner scanner = new Scanner(System.in);
 
-    // Exibe a mensagem, lê um inteiro e garante que ele esteja dentro do intervalo
-    // [min, max].
+    /**
+     * Lê um número inteiro dentro de um intervalo [min, max].
+     *
+     * @param mensagem mensagem a ser exibida para o usuário.
+     * @param min      valor mínimo aceito.
+     * @param max      valor máximo aceito.
+     * @return inteiro válido digitado pelo usuário.
+     */
     public static int lerInteiro(String mensagem, int min, int max) {
         int valor;
         while (true) {
@@ -26,15 +49,28 @@ public class InputManager {
         }
     };
 
-    // Exibe a mensagem e lê uma linha de texto.
+    /**
+     * Lê uma linha de texto digitada pelo usuário.
+     *
+     * @param mensagem mensagem a ser exibida para o usuário.
+     * @return texto digitado pelo usuário.
+     */
     public static String lerString(String mensagem) {
         System.out.print(mensagem + " ");
         return scanner.nextLine();
     }
 
-    // Exibe a mensagem (que deve terminarcom (s/n)), lˆe a entrada e retorna true
-    // para s e false para n (ignorando mai ́usculas/min ́usculas). Deve repetir o
-    // pedido para qualquer outra entrada.
+    /**
+     * Lê uma resposta do tipo sim/não (s/n).
+     *
+     * <p>
+     * Repete a solicitação até que o usuário digite 's' ou 'n', ignorando
+     * maiúsculas/minúsculas.
+     * </p>
+     *
+     * @param mensagem mensagem a ser exibida para o usuário (deve indicar s/n).
+     * @return {@code true} se o usuário digitar 's', {@code false} se digitar 'n'.
+     */
     public static boolean lerSimNao(String mensagem) {
         char valor;
         while (true) {
@@ -51,15 +87,24 @@ public class InputManager {
         }
     };
 
-    // Exibe a mensagem (ex: Pressione ENTER para continuar...) e pausa a execução
-    // até que o usuário pressione a tecla Enter.
+    /**
+     * Pausa a execução do programa até que o usuário pressione Enter.
+     *
+     * @param mensagem mensagem exibida antes de esperar o Enter.
+     */
     public static void esperarEnter(String mensagem) {
         System.out.print(mensagem + " ");
         scanner.nextLine();
     };
 
-    // Expõe um método para fechar o objeto Scanner subjacente, evitando
-    // vazamento de recursos. Deve ser chamado uma ́unica vez no final do programa.
+    /**
+     * Fecha o {@link Scanner} utilizado pela classe, evitando vazamento de
+     * recursos.
+     *
+     * <p>
+     * Deve ser chamado apenas uma vez, no final do programa.
+     * </p>
+     */
     public static void fecharScanner() {
         scanner.close();
     };
