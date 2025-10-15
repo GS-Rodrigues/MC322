@@ -11,7 +11,7 @@ import ResistIC.Suporte.ConsoleColors;
  *
  * <p>
  * A classe {@code GameManager} é responsável por:
- * <ul>
+ *
  * <li>Inicializar o jogo, solicitando informações do jogador (nome, herói e
  * dificuldade).</li>
  * <li>Gerar as fases de combate através de
@@ -20,7 +20,6 @@ import ResistIC.Suporte.ConsoleColors;
  * <li>Gerenciar interações pós-turno, como loot, status do personagem e
  * desistência.</li>
  * <li>Exibir mensagens de vitória ou derrota ao final do jogo.</li>
- * </ul>
  * </p>
  *
  * <p>

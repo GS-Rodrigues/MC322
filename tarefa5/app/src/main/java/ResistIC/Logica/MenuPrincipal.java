@@ -8,7 +8,44 @@ import ResistIC.Personagens.Monstros.Genomex;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.Suporte.Lore;
 
+/**
+ * Exibe e gerencia o menu principal do jogo.
+ *
+ * <p>
+ * A classe {@code MenuPrincipal} é responsável por apresentar as opções
+ * iniciais
+ * ao jogador e redirecionar para as funcionalidades correspondentes,
+ * como iniciar um novo jogo, visualizar heróis, monstros, lore ou encerrar a
+ * aplicação.
+ * </p>
+ *
+ * <p>
+ * O método {@link #exibirmenu()} imprime o menu na tela e chama
+ * {@link #escolher()}
+ * para capturar e processar as ações do jogador.
+ * </p>
+ *
+ * @author Guilherme & Giovani
+ * @version 1.0
+ * @since 2025-10-12
+ */
 public class MenuPrincipal {
+
+    /**
+     * Controla a execução das opções escolhidas pelo jogador.
+     *
+     * <p>
+     * Cada número digitado corresponde a uma ação específica:
+     * <li>1 – Inicia o jogo com {@link GameManager}</li>
+     * <li>2 – Exibe descrições dos heróis {@link Lehilton} e {@link Marcelo}</li>
+     * <li>3 – Mostra informações sobre os monstros disponíveis</li>
+     * <li>4 – Encerra o jogo e fecha o {@link InputManager}</li>
+     * <li>5 – Exibe a lore do jogo através de {@link Lore}</li>
+     * <li>6 – Mostra informações dos desenvolvedores</li>
+     * </p>
+     *
+     * O método continua em loop até que o jogador escolha sair.
+     */
     public void escolher() {
         boolean rodando = true;
         while (rodando) {
@@ -56,6 +93,19 @@ public class MenuPrincipal {
 
     }
 
+    /**
+     * Exibe o menu principal e inicia a captura de opções do jogador.
+     *
+     * <p>
+     * Apresenta as seguintes opções:
+     * <li>[1] Iniciar novo jogo</li>
+     * <li>[2] Ver informações dos heróis</li>
+     * <li>[3] Ver informações dos monstros</li>
+     * <li>[4] Sair do jogo</li>
+     * <li>[5] Ver lore do jogo</li>
+     * <li>[6] Ver informações dos desenvolvedores</li>
+     * </p>
+     */
     public void exibirmenu() {
         System.out
                 .println(ConsoleColors.BLUE + "=============== " + ConsoleColors.RESET + ConsoleColors.ORANGE + "Resist"

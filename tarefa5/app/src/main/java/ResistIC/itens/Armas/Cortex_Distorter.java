@@ -15,7 +15,8 @@ import ResistIC.Suporte.ConsoleColors;
  *
  * 
  * <p>
- * O {@code Cortex_Distorter} herda os comportamentos básicos da classe {@link Arma} e
+ * O {@code Cortex_Distorter} herda os comportamentos básicos da classe
+ * {@link Arma} e
  * sobrescreve o método {@link #info()}.
  * </p>
  * 

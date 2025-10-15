@@ -21,12 +21,10 @@ import ResistIC.Suporte.ConsoleColors;
  *
  * <p>
  * Cada fase possui:
- * <ul>
  * <li>Um nome e uma descrição imersiva, detalhando o cenário e os perigos.</li>
  * <li>Um {@link TipoCenario} específico que representa o local.</li>
  * <li>Um monstro designado, que simboliza os desafios que a Resistência
  * deve enfrentar.</li>
- * </ul>
  * </p>
  *
  * <p>

@@ -5,12 +5,10 @@ package ResistIC.Logica;
  * para os atributos dos monstros e variações na sorte do herói.
  *
  * <p>
- * Cada nível possui:
- * <ul>
+ * Cadanível possui:
  * <li>{@code multiplicador_forca_vida_monstro}: fator que ajusta a vida
  * e força dos monstros.</li>
  * <li>{@code variacao_sorte_heroi}: ajuste na sorte do herói.</li>
- * </ul>
  * </p>
  */
 public enum Dificuldade {
