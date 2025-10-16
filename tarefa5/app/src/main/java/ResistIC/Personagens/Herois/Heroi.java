@@ -19,6 +19,9 @@ import ResistIC.itens.Armas.Arma;
  * combate.
  * </p>
  * 
+ * @author Guilherme & Giovani
+ * @version 1.0
+ * @since 2025-10-08
  */
 public abstract class Heroi extends Personagem {
     private int nivel;
