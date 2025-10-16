@@ -13,7 +13,7 @@ package ResistIC.Interfaces;
  * desferir em outro combatente.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */

@@ -4,16 +4,22 @@ package ResistIC.Logica;
  * Representa os níveis de dificuldade do jogo, definindo modificadores
  * para os atributos dos monstros e variações na sorte do herói.
  *
- * <p>
  * Cadanível possui:
+ * <ul>
  * <li>{@code multiplicador_forca_vida_monstro}: fator que ajusta a vida
  * e força dos monstros.</li>
  * <li>{@code variacao_sorte_heroi}: ajuste na sorte do herói.</li>
- * </p>
+ * </ul>
  */
 public enum Dificuldade {
+
+    /** Fácil: inimigos mais fracos e heróis com bônus de sorte */
     FACIL(0.75, 0.2),
+
+    /** Normal: inimigos com força padrão e sem variação de sorte */
     NORMAL(1.0, 0.0),
+
+    /** Difícil: inimigos mais fortes e heróis com sorte reduzida */
     DIFICIL(1.5, -0.2);
 
     /** Fator de aumento/redução da vida e da força do monstro. */

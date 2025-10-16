@@ -2,9 +2,13 @@ package ResistIC.Suporte;
 
 /**
  * Classe Suporte responsável por exibir a lore.
- * <p>
  */
 public class Lore {
+    /** Construtor privado para evitar instâncias da classe utilitária. */
+    private Lore() {
+    }
+
+    /** Imprime a Lore */
     public static void imprimir() {
         String[] lore = {
                 "No ano de 2147, as Inteligências Artificiais evoluíram além do controle humano, tornando-se completamente autônomas e conscientes.",

@@ -19,17 +19,36 @@ import ResistIC.Personagens.Herois.Heroi;
  * O ataque é descrito com mensagens narrativas.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */
 public class HabilidadeEspecial implements AcaoDeCombate {
     private String especialidade;
 
+    /**
+ * Cria uma instância de HabilidadeEspecial com uma especialidade do personagem
+ *
+ * @param especialidade Especialidade do personagem 
+ */
     public HabilidadeEspecial(String especialidade) {
         this.especialidade = especialidade;
     }
 
+/**
+ * Executa a habilidade especial do herói sobre o alvo.
+ * 
+ * <p>
+ * Calcula a sorte do usuário e decide se o ataque acerta ou erra:
+ * </p>
+ * <ul>
+ *   <li>Se a sorte for >= 0.30, aplica dano crítico dobrado baseado na força do usuário e da arma.</li>
+ *   <li>Se a sorte for &lt; 0.30, o ataque erra e não causa dano.</li>
+ * </ul>
+ * 
+ * @param usuario O combatente que realiza a ação (deve ser um {@link Heroi}).
+ * @param alvo O combatente alvo que receberá o dano.
+ */
     @Override
     public void executar(Combatente usuario, Combatente alvo) {
 

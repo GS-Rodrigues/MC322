@@ -25,24 +25,28 @@ import ResistIC.Suporte.Lore;
  * para capturar e processar as ações do jogador.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
 public class MenuPrincipal {
 
+    /** Construtor sem argumentos */
+    public MenuPrincipal() {
+    }
+
     /**
      * Controla a execução das opções escolhidas pelo jogador.
      *
-     * <p>
      * Cada número digitado corresponde a uma ação específica:
+     * <ul>
      * <li>1 – Inicia o jogo com {@link GameManager}</li>
      * <li>2 – Exibe descrições dos heróis {@link Lehilton} e {@link Marcelo}</li>
      * <li>3 – Mostra informações sobre os monstros disponíveis</li>
      * <li>4 – Encerra o jogo e fecha o {@link InputManager}</li>
      * <li>5 – Exibe a lore do jogo através de {@link Lore}</li>
      * <li>6 – Mostra informações dos desenvolvedores</li>
-     * </p>
+     * </ul>
      *
      * O método continua em loop até que o jogador escolha sair.
      */
@@ -96,15 +100,15 @@ public class MenuPrincipal {
     /**
      * Exibe o menu principal e inicia a captura de opções do jogador.
      *
-     * <p>
      * Apresenta as seguintes opções:
+     * <ul>
      * <li>[1] Iniciar novo jogo</li>
      * <li>[2] Ver informações dos heróis</li>
      * <li>[3] Ver informações dos monstros</li>
      * <li>[4] Sair do jogo</li>
      * <li>[5] Ver lore do jogo</li>
      * <li>[6] Ver informações dos desenvolvedores</li>
-     * </p>
+     * </ul>
      */
     public void exibirmenu() {
         System.out

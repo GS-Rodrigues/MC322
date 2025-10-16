@@ -4,6 +4,11 @@ package ResistIC.Suporte;
  * Define cores ANSI para personalizar a saída de texto no console.
  */
 public class ConsoleColors {
+
+    /** Construtor privado para evitar instâncias da classe utilitária. */
+    private ConsoleColors() {
+    }
+
     /** Reseta a cor para o padrão do console */
     public static final String RESET = "\u001B[0m";
     /** Vermelho */

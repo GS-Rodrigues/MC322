@@ -74,10 +74,12 @@ public class Lehilton extends Heroi {
     /**
      * Escolhe automaticamente a ação de combate a ser executada,
      * com base na vida atual do alvo.
+     * <ul>
      * <li>Se a vida do alvo for maior que 30, utiliza
      * {@code HabilidadeEspecial}.</li>
      * <li>Se a vida for menor ou igual a 30, utiliza {@code AtaqueBasico}.</li>
-     *
+     * </ul>
+     * 
      * @param alvo inimigo ou combatente alvo
      * @return ação de combate selecionada
      */

@@ -19,15 +19,14 @@ import ResistIC.Suporte.ConsoleColors;
  * com base nos institutos do campus e nos inimigos correspondentes.
  * </p>
  *
- * <p>
  * Cada fase possui:
+ * <ul>
  * <li>Um nome e uma descrição imersiva, detalhando o cenário e os perigos.</li>
  * <li>Um {@link TipoCenario} específico que representa o local.</li>
  * <li>Um monstro designado, que simboliza os desafios que a Resistência
  * deve enfrentar.</li>
- * </p>
+ * </ul>
  *
- * <p>
  * Exemplo de fases criadas:
  * <ul>
  * <li><b>Instituto de Biologia:</b> Vegetação densa e experimentos fora de
@@ -36,14 +35,17 @@ import ResistIC.Suporte.ConsoleColors;
  * perigosas.</li>
  * <li><b>Instituto de Física Gleb Wataghin:</b> Atmosfera sombria, manchas de
  * sangue e desafios extremos.</li>
- * </p>
+ * </ul>
  *
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
 public class ConstrutorDeCenarioFixo implements GeradorDeFases {
+    /** Construtor sem argumentos */
+    protected ConstrutorDeCenarioFixo() {
+    }
 
     /** Nomes e descrições detalhadas de cada fase do campus. */
     private static final String[] nomeFases = {

@@ -14,11 +14,16 @@ import java.util.Scanner;
  * Todos os métodos usam internamente um {@link Scanner} único e estático.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
 public class InputManager {
+    
+    /** Construtor sem argumentos */
+    protected InputManager() {
+    }
+
     /** Scanner único para capturar entradas do usuário. */
     private static final Scanner scanner = new Scanner(System.in);
 

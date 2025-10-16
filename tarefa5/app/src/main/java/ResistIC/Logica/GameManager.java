@@ -9,9 +9,9 @@ import ResistIC.Suporte.ConsoleColors;
 /**
  * Gerencia o fluxo principal do jogo.
  *
- * <p>
  * A classe {@code GameManager} é responsável por:
  *
+ * <ul>
  * <li>Inicializar o jogo, solicitando informações do jogador (nome, herói e
  * dificuldade).</li>
  * <li>Gerar as fases de combate através de
@@ -20,18 +20,22 @@ import ResistIC.Suporte.ConsoleColors;
  * <li>Gerenciar interações pós-turno, como loot, status do personagem e
  * desistência.</li>
  * <li>Exibir mensagens de vitória ou derrota ao final do jogo.</li>
- * </p>
+ * </ul>
  *
  * <p>
  * O método {@link #iniciar()} encapsula toda a lógica de execução do jogo,
  * desde a seleção de opções até o combate final.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
 public class GameManager {
+
+    /** Construtor sem argumentos */
+    protected GameManager() {
+    }
 
     /**
      * Inicia o jogo.

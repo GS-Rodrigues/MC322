@@ -19,13 +19,18 @@ import ResistIC.Suporte.ConsoleColors;
  * estruturas orgânicas.</li>
  * </ul>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
 public enum TipoCenario {
+    /** Instituto de Exatas: inimigos utilizam ataques numéricos. */
     INSTITUTO_DE_EXATAS("EXATAS", "ATAQUES NUMÉRICOS"),
+
+    /** Instituto de Humanas: inimigos utilizam ataques de persuasão. */
     INSTITUTO_DE_HUMANAS("HUMANAS", "ATAQUES DE PERSUASÃO"),
+
+    /** Instituto de Biológicas: inimigos atacam estruturas orgânicas. */
     INSTITUTO_DE_BIOLOGICAS("BIOLÓGICAS", "ATAQUES ÀS ESTRUTURAS ORGÂNICAS");
 
     /** Área do conhecimento principal do instituto. */

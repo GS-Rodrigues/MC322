@@ -17,7 +17,7 @@ import ResistIC.Personagens.Herois.Heroi;
  * ao criar a fase.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-12
  */
@@ -102,7 +102,7 @@ public class FaseDeCombate implements Fase {
     // public boolean isConcluida() {
     // boolean esta_concluida = true;
     // int i = 0;
-    // while(esta_concluida && i < monstros.length)
+    // while(esta_concluida ee i < monstros.length)
     // {
     // if (monstros[i].estaVivo()) {
     // return false;

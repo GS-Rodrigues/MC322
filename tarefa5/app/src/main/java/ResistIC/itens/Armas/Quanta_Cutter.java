@@ -20,7 +20,7 @@ import ResistIC.Suporte.ConsoleColors;
  * “Ela corta não apenas o metal — mas também a própria lógica das máquinas.” 
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */

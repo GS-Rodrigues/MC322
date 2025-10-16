@@ -18,7 +18,7 @@ import ResistIC.Interfaces.Combatente;
  * uma mensagem adicional é exibida informando sua derrota.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */
@@ -26,10 +26,25 @@ public class AtaqueBasico implements AcaoDeCombate {
     private String[] frases;
     private Random gerador = new Random();
 
+    /**
+     * Cria uma instância de AtaqueBasico com um conjunto de frases de ataque.
+     *
+     * @param frases Vetor de strings que descrevem os ataques que podem ser
+     *               escolhidos aleatoriamente.
+     */
     public AtaqueBasico(String[] frases) {
         this.frases = frases;
     }
 
+    /**
+     * Executa um ataque básico do usuário contra o alvo.
+     * Calcula o dano somando a força do usuário e o dano da arma, aplica ao alvo,
+     * e exibe o ataque e a vida restante. Se o alvo morrer, exibe mensagem de
+     * derrota.
+     *
+     * @param usuario O combatente que realiza o ataque.
+     * @param alvo    O combatente que recebe o ataque.
+     */
     @Override
     public void executar(Combatente usuario, Combatente alvo) {
 

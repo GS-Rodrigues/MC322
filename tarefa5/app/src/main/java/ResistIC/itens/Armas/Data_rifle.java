@@ -24,7 +24,7 @@ import ResistIC.Suporte.ConsoleColors;
  * para diferentes estratégias de combate cibernético.
  * </p>
  *
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */

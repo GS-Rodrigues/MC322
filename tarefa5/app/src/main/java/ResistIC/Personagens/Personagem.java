@@ -16,14 +16,21 @@ import ResistIC.itens.Armas.Arma;
  * a escolha de ação de combate específica.
  * </p>
  * 
- * @author Guilherme & Giovani
+ * @author Guilherme e Giovani
  * @version 1.0
  * @since 2025-10-08
  */
 public abstract class Personagem implements Combatente {
+    /** Nome do personagem */
     protected String nome;
+
+    /** Pontos de vida atuais do personagem */
     protected int pontosDeVida;
+
+    /** Força do personagem, usada para calcular dano */
     protected int forca;
+
+    /** Arma atualmente equipada pelo personagem */
     protected Arma arma;
 
     /**
