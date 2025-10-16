@@ -9,8 +9,26 @@ import ResistIC.Interfaces.Item;
 import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Cortex_Distorter;
+import ResistIC.itens.Armas.Quanta_Cutter;
 
+/**
+ * Representa o mostro Genomex, uma especialização concreta de {@link Monstro}.
+ * 
+ */
 public class Genomex extends Monstro {
+    Random gerador = new Random();
+
+    /**
+     * Constrói um novo monstro Genomex com a arma {@link Quanta_Cutter} e
+     * define suas ações de combate iniciais.
+     */
+    public Genomex() {
+        super("Genomex", 100, 20, 100, new Cortex_Distorter());
+    }
+
+    /**
+     * Lista de descrições possíveis dos ataques realizados por Genomex.
+     */
     private static final String[] ataques = {
             "invade o sistema, corrompendo suas defesas!",
             "lança milhares de pacotes binários como insetos digitais contra você!",
@@ -20,30 +38,43 @@ public class Genomex extends Monstro {
             "lança uma tempestade de bits envenenados que drenam sua energia vital!"
     };
 
-    Random gerador = new Random();
-
-    public Genomex() {
-        super("Genomex", 100, 20, 100, new Cortex_Distorter());
-    }
-
+    /**
+     * Descrição / história do monstro
+     */
     public static final String descricao = ConsoleColors.PURPLE + "Genomex" + ConsoleColors.RESET
-    + ": Genomex foi criado como uma simulação evolutiva de organismos digitais"
-    + "— mas ele escapou do ambiente de teste. Com código genético mutável e uma IA adaptativa, ele evolui a cada conflito."
-    + " Seus ataques são imprevisíveis, e sua forma nunca é a mesma por muito tempo."
-    + " O combate contra Genomex é uma corrida entre sua evolução e sua destruição.";
-
-    public Item droparLoot() {
-        Item item = new Codeblade();
-        return item;
-    }
-
+            + ": Genomex foi criado como uma simulação evolutiva de organismos digitais"
+            + "— mas ele escapou do ambiente de teste. Com código genético mutável e uma IA adaptativa, ele evolui a cada conflito."
+            + " Seus ataques são imprevisíveis, e sua forma nunca é a mesma por muito tempo."
+            + " O combate contra Genomex é uma corrida entre sua evolução e sua destruição.";
+            
+            /**
+     * Retorna as descrições dos ataques disponíveis para o monstro.
+     *
+     * @return vetor de descrições de ataque
+     */
     @Override
     public String[] getDescricoesDeAtaque() {
         return ataques;
     }
-
+    
+    /**
+     * Escolhe automaticamente a ação de combate a ser executada
+     * 
+     * @param alvo inimigo ou combatente alvo
+     * @return ação de combate selecionada
+     */
     @Override
     public AcaoDeCombate escolherAcao(Combatente alvo) {
         return new AtaqueBasico(ataques);
     }
+
+        /**
+     * Define o item deixado como recompensa ao derrota-lo.
+     *
+     * @return uma nova {@link Codeblade} como loot
+     */
+        public Item droparLoot() {
+            Item item = new Codeblade();
+            return item;
+        }
 }

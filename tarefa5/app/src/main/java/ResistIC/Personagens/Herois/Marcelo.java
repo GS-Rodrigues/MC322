@@ -8,8 +8,24 @@ import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Turing_Hammer;
 
 /**
- * Representa o herói Marcelo, uma especialização concreta de {@link Heroi}.
- * 
+ * Representa o herói {@code Marcelo}, um dos principais cientistas da
+ * Resistência.
+ *
+ * <p>
+ * Marcelo domina a arte da identificação de padrões e da inteligência
+ * computacional aplicada ao combate.
+ * Seu olhar analítico e sua precisão em detectar vulnerabilidades o tornam
+ * indispensável em operações
+ * estratégicas, especialmente contra inimigos baseados em aprendizado mecânico
+ * ou sistemas preditivos.
+ * </p>
+ *
+ * <p>
+ * No contexto técnico, esta é uma implementação concreta de {@link Heroi},
+ * configurando suas
+ * ações de combate com a arma {@link Turing_Hammer} e habilidades inspiradas em
+ * aprendizado de máquina.
+ * </p>
  */
 public class Marcelo extends Heroi {
 

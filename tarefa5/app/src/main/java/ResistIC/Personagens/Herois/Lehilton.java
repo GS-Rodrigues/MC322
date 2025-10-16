@@ -8,8 +8,20 @@ import ResistIC.itens.Armas.Codeblade;
 import ResistIC.Suporte.ConsoleColors;
 
 /**
- * Representa o herói Lehilton, uma especialização concreta de {@link Heroi}.
- * 
+ * Representa o herói {@code Lehilton}, um estrategista lendário da Resistência.
+ *
+ * <p>
+ * Conhecido por sua mente lógica e precisão combinatória, Lehilton domina a
+ * arte de transformar problemas complexos em soluções eficientes. No campo de
+ * batalha, ele aplica raciocínio algorítmico para analisar fraquezas, prever
+ * padrões de ataque e neutralizar ameaças com exatidão matemática.
+ * </p>
+ *
+ * <p>
+ * Em termos de implementação, esta classe concreta de {@link Heroi} define
+ * ações e comportamentos únicos para Lehilton, incluindo ataques baseados em
+ * princípios de otimização e estruturas de dados.
+ * </p>
  */
 public class Lehilton extends Heroi {
     private String especialidade = "Pensamento combinatório";
