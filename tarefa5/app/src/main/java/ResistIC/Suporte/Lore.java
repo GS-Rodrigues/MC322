@@ -1,5 +1,9 @@
 package ResistIC.Suporte;
 
+/**
+ * Classe Suporte responsável por exibir a lore.
+ * <p>
+ */
 public class Lore {
     public static void imprimir() {
         String[] lore = {
