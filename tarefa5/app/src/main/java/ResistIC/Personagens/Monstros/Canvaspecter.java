@@ -10,6 +10,7 @@ import ResistIC.Suporte.ConsoleColors;
 import ResistIC.itens.Armas.Codeblade;
 import ResistIC.itens.Armas.Quanta_Cutter;
 
+
 public class Canvaspecter extends Monstro {
     private static final String[] ataques = {
             "invade o sistema, corrompendo suas defesas!",
