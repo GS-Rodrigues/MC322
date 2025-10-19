@@ -34,7 +34,8 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'tarefa5_.App'
+    mainClass = 'ResistIC.Main'
+
 }
 
 tasks.named('test') {

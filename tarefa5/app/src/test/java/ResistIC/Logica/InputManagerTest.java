@@ -28,6 +28,7 @@ public class InputManagerTest {
     @Test
     void testLerInteiroEntradaValida() {
         String simulatedInput = "5\n"; // o usuário digita 5 e aperta Enter
+        InputManager.setScanner(new ByteArrayInputStream(simulatedInput.getBytes()));
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
         int resultado = InputManager.lerInteiro("Digite um número:", 1, 10);
@@ -37,15 +38,17 @@ public class InputManagerTest {
 
     @Test
     void testLerInteiroEntradaInvalidaDepoisValida() {
-        // Simula alguem digitando "abc" (inválido), depois "12" (fora do intervalo), depois "8" (válido)
+        // Simula alguem digitando "abc" (inválido), depois "12" (fora do intervalo),
+        // depois "8" (válido)
         String simulatedInput = "abc\n12\n8\n";
+        InputManager.setScanner(new ByteArrayInputStream(simulatedInput.getBytes()));
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
         int resultado = InputManager.lerInteiro("Digite:", 1, 10);
 
         // deve ignorar as entradas erradas e aceitar o 8
         assertEquals(8, resultado);
-        assertTrue(outputStream.toString().contains("⚠️ Entrada inválida"), 
+        assertTrue(outputStream.toString().contains("⚠️ Entrada inválida"),
                 "Deve mostrar aviso de entrada inválida");
         assertTrue(outputStream.toString().contains("⚠️ Valor fora do intervalo"),
                 "Deve mostrar aviso de valor fora do intervalo");
@@ -54,6 +57,7 @@ public class InputManagerTest {
     @Test
     void testLerString() {
         String simulatedInput = "Monte Verde\n";
+        InputManager.setScanner(new ByteArrayInputStream(simulatedInput.getBytes()));
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
         String resultado = InputManager.lerString("Destino:");
@@ -63,6 +67,7 @@ public class InputManagerTest {
     @Test
     void testLerSimNao() {
         String simulatedInput = "s\n";
+        InputManager.setScanner(new ByteArrayInputStream(simulatedInput.getBytes()));
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
         boolean resultado = InputManager.lerSimNao("Deseja continuar?");
@@ -72,6 +77,7 @@ public class InputManagerTest {
     @Test
     void testLerSimNaoNao() {
         String simulatedInput = "n\n";
+        InputManager.setScanner(new ByteArrayInputStream(simulatedInput.getBytes()));
         System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
 
         boolean resultado = InputManager.lerSimNao("Deseja sair?");
