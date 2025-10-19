@@ -99,6 +99,10 @@ public class FaseDeCombate implements Fase {
         return Tipo_de_Cenario;
     }
 
+    public Dificuldade getDificuldade(){
+        return this.dificuldade;
+    }
+
     // public boolean isConcluida() {
     // boolean esta_concluida = true;
     // int i = 0;

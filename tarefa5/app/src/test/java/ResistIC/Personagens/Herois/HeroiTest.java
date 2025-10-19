@@ -22,8 +22,8 @@ public class HeroiTest {
     @Test
     void testeReceberDano() {
         int vidaInicial = inimigo.getVida();
-        inimigo.receberDano(31);
-        assertEquals(vidaInicial - 31, inimigo.getVida(), "Inimigo deve perder 30 de vida");
+        inimigo.receberDano(181);
+        assertEquals(vidaInicial - 181, inimigo.getVida(), "Inimigo deve perder 181 de vida");
     }
 
     @Test
@@ -35,12 +35,12 @@ public class HeroiTest {
 
     @Test
     void testeEscolherAcao() {
-        inimigo.receberDano(80); // vida <= 30
+        inimigo.receberDano(180); // vida <= 30
         assertEquals("AtaqueBasico",
                 heroi.escolherAcao(inimigo).getClass().getSimpleName(),
                 "Deve escolher AtaqueBasico para inimigo com pouca vida");
 
-        inimigo.receberDano(-50); // vida > 30
+        inimigo.receberCura(100); // vida > 30
         assertEquals("HabilidadeEspecial",
                 heroi.escolherAcao(inimigo).getClass().getSimpleName(),
                 "Deve escolher HabilidadeEspecial para inimigo com vida alta");
