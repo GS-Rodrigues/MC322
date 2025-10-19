@@ -1,5 +1,6 @@
 package ResistIC.Logica;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 /**
@@ -19,13 +20,18 @@ import java.util.Scanner;
  * @since 2025-10-12
  */
 public class InputManager {
-    
+
     /** Construtor sem argumentos */
     protected InputManager() {
     }
 
     /** Scanner único para capturar entradas do usuário. */
-    private static final Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+
+    /** Reset do scanner */
+    public static void setScanner(InputStream in) {
+        scanner = new Scanner(in);
+    }
 
     /**
      * Lê um número inteiro dentro de um intervalo [min, max].
