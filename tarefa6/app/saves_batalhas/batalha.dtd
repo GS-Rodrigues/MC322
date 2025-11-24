@@ -1,0 +1,33 @@
+<!ELEMENT batalha (dificuldade, dificuldade_de_jogo, fases, heroi, nome_do_jogador, numero_fase_atual, quantidade_de_fases, string_heroi)>
+<!ELEMENT dificuldade (#PCDATA)>
+<!ELEMENT dificuldade_de_jogo (#PCDATA)>
+<!ELEMENT fases (fase*)>
+<!ELEMENT nome_do_jogador (#PCDATA)>
+<!ELEMENT numero_fase_atual (#PCDATA)>
+<!ELEMENT quantidade_de_fases (#PCDATA)>
+<!ELEMENT string_heroi (#PCDATA)>
+
+<!ELEMENT heroi (acoes?, arma?, especialidade?, experiencia, forca, nivel, nome, pontosProximoNivel, sorte, variacao_sorte_heroi, vida)>
+<!ELEMENT acoes (acao*)>
+<!ELEMENT acao (#PCDATA)>
+<!ELEMENT arma (dano, minNivel, nome)>
+<!ELEMENT especialidade (#PCDATA)>
+<!ELEMENT experiencia (#PCDATA)>
+<!ELEMENT forca (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT pontosProximoNivel (#PCDATA)>
+<!ELEMENT sorte (#PCDATA)>
+<!ELEMENT variacao_sorte_heroi (#PCDATA)>
+<!ELEMENT vida (#PCDATA)>
+
+<!ELEMENT fase (ambiente, dificuldade, monstro, numeroFase, tipoCenario)>
+<!ELEMENT ambiente (#PCDATA)>
+<!ELEMENT monstro (arma?, forca, nome, vida, xpConcedido)>
+<!ELEMENT numeroFase (#PCDATA)>
+<!ELEMENT tipoCenario (descricao?)>
+<!ELEMENT xpConcedido (#PCDATA)>
+
+<!ELEMENT dano (#PCDATA)>
+<!ELEMENT minNivel (#PCDATA)>
+<!ELEMENT descricao (#PCDATA)>

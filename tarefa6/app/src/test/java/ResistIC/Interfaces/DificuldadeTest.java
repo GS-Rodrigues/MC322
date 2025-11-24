@@ -8,7 +8,7 @@ import ResistIC.Logica.Dificuldade;
 import ResistIC.Personagens.Monstros.Chronoloop;
 
 public class DificuldadeTest {
-
+    
     @Test
     void testeVidaEForcaComDificuldade() {
         // Cria dois monstros Chronoloop em diferentes "dificuldades"

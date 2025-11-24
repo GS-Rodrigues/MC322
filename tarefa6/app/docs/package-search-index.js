@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ResistIC"},{"l":"ResistIC.Habilidades"},{"l":"ResistIC.Interfaces"},{"l":"ResistIC.itens.Armas"},{"l":"ResistIC.Logica"},{"l":"ResistIC.Personagens"},{"l":"ResistIC.Personagens.Herois"},{"l":"ResistIC.Personagens.Monstros"},{"l":"ResistIC.Suporte"}];updateSearchResults();
