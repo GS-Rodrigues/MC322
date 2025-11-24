@@ -248,7 +248,7 @@ public class Batalha {
                                         rodando = false;
                                         MenuPrincipal novoMenuPrincipal = new MenuPrincipal();
                                         novoMenuPrincipal.exibirmenu();
-
+                                        scannerSave.close();
                                         return;
                                     }
                                     

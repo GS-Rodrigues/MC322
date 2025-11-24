@@ -97,15 +97,14 @@ public class MenuPrincipal {
             else if (instancia == 7) {
                 String nomeSave = InputManager.lerString("Digite o noem do save: ");
                 Batalha jogoCarregado = Batalha.carregarJogo(nomeSave);
-                jogoCarregado.executar();
 
                 if (jogoCarregado != null) {
+                    jogoCarregado.executar();
                     System.out.println(
                             ConsoleColors.GREEN + "Save encontrado! Retomando a batalha..." + ConsoleColors.RESET);
-                }
-                
-                else {
-                 System.out.println(ConsoleColors.RED + "Falha ao carregar. Voltando ao menu." + ConsoleColors.RESET);   
+                } else {
+                    System.out
+                            .println(ConsoleColors.RED + "Falha ao carregar. Voltando ao menu." + ConsoleColors.RESET);
                 }
             }
             System.out.println();
